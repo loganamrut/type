@@ -73,7 +73,7 @@ letter-spacing: ${settings.letterSpacing}em;`;
 
   const handleCopyText = async (e: React.MouseEvent) => {
     e.stopPropagation();
-    const textToCopy = settings.text || 'The quick brown fox jumps over the lazy dog.';
+    const textToCopy = settings.text || 'Your text here';
     const variant = getMatchingStyleVariant(typeface.category, closestWeight, typeface.id);
 
     const success = await copyStyledTextToClipboard(textToCopy, variant, {
@@ -190,7 +190,7 @@ letter-spacing: ${settings.letterSpacing}em;`;
           wordBreak: 'break-word',
         }}
       >
-        {settings.text || 'The quick brown fox jumps over the lazy dog.'}
+        {settings.text || 'Your text here'}
       </div>
 
       {/* Footer toolbar: Copy CSS button, Copy text, and link */}

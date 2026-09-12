@@ -40,7 +40,7 @@ export function TextEditor({ value, onChange, className = '' }: TextEditorProps)
   };
 
   const handleReset = () => {
-    onChange('The quick brown fox jumps over the lazy dog.');
+    onChange('Your text here');
     textareaRef.current?.focus();
   };
 

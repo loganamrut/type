@@ -19,7 +19,7 @@ interface TypefaceGeneratorProps {
 }
 
 const DEFAULT_TYPOGRAPHY_SETTINGS: TypographySettings = {
-  text: 'The quick brown fox jumps over the lazy dog.',
+  text: 'Your text here',
   fontSize: 24,
   fontWeight: 400,
   lineHeight: 1.5,
