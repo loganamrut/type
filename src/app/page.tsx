@@ -1,0 +1,310 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import { TypefaceGenerator } from '@/components/TypefaceGenerator';
+import { TypefacePairing } from '@/components/TypefacePairing';
+import { TypefaceComparison } from '@/components/TypefaceComparison';
+import { TypeScaleTool } from '@/components/TypeScaleTool';
+import { FAQSection, FAQS_DATA } from '@/components/FAQSection';
+import { JsonLd } from '@/components/JsonLd';
+
+export const metadata: Metadata = {
+  title: 'Typeface Generator - Preview, Compare & Pair Fonts Online',
+  description:
+    'Use our free typeface generator to preview, compare, and pair typefaces online. Test custom text with 200+ popular fonts, modular scales, styles, and copy CSS instantly.',
+  keywords: [
+    'typeface generator',
+    'typeface generator online',
+    'free typeface generator',
+    'online typeface generator',
+    'typeface maker',
+    'typeface creator',
+    'typeface design generator',
+    'font and typeface generator',
+    'typography generator',
+    'typography tool',
+    'typeface preview',
+    'typeface tester',
+    'font preview',
+    'font pairing',
+    'font pairing generator',
+    'typeface pairing',
+    'font combination generator',
+  ],
+  alternates: {
+    canonical: 'https://typefacegen.com/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://typefacegen.com/',
+    siteName: 'TypefaceGen',
+    title: 'Typeface Generator - Preview, Compare & Pair Fonts Online',
+    description:
+      'Use our free typeface generator to preview, compare, and pair typefaces online. Test custom text with 200+ popular fonts, modular scales, styles, and copy CSS instantly.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TypefaceGen - Online Typeface Generator & Typography Studio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Typeface Generator - Preview, Compare & Pair Fonts Online',
+    description:
+      'Use our free typeface generator to preview, compare, and pair typefaces online. Test custom text with 200+ popular fonts, modular scales, styles, and copy CSS instantly.',
+    images: ['/og-image.png'],
+  },
+};
+
+export default function HomePage() {
+  return (
+    <>
+      <JsonLd
+        type="website"
+        url="https://typefacegen.com/"
+        toolName="Typeface Generator & Online Typography Studio"
+        toolDescription="Free online typeface generator to preview, compare, and pair 200+ Google & open-source typefaces with live custom text, modular scales, and instant CSS export."
+        faqs={FAQS_DATA}
+        breadcrumbs={[{ name: 'Typeface Generator', item: 'https://typefacegen.com/' }]}
+      />
+
+      <div className="space-y-12 sm:space-y-16">
+        {/* 1. PRIMARY CORE PRODUCT (ABOVE THE FOLD) */}
+        <TypefaceGenerator />
+
+        {/* 2. TYPEFACE PAIRING GENERATOR SECTION */}
+        <section className="pt-6 border-t border-zinc-200">
+          <TypefacePairing />
+        </section>
+
+        {/* 3. SIDE-BY-SIDE TYPEFACE INSPECTOR / TESTER */}
+        <section className="pt-6 border-t border-zinc-200">
+          <TypefaceComparison initialFontIds={['inter', 'playfair-display', 'newsreader']} />
+        </section>
+
+        {/* 4. MODULAR TYPE SCALE CALCULATOR */}
+        <section className="pt-6 border-t border-zinc-200">
+          <TypeScaleTool />
+        </section>
+
+        {/* 5. EDITORIAL & EDUCATIONAL TYPOGRAPHY AUTHORITY */}
+        <section className="pt-8 border-t border-zinc-200 space-y-12">
+          {/* Header */}
+          <div className="space-y-1.5 max-w-2xl">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950">
+              Understanding Digital Typefaces &amp; Typography
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed">
+              Explore the history, technical mechanics, and architectural principles that govern
+              effective typography on digital screens.
+            </p>
+          </div>
+
+          {/* Section 1: What is a Typeface & Typeface vs Font */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            <div className="bg-white border border-zinc-200 p-5 rounded-lg space-y-2">
+              <h3 className="text-sm font-bold text-zinc-950">
+                What Is a Typeface?
+              </h3>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                A <strong>typeface</strong> is the visual identity and overarching artistic design
+                of a collection of characters, letters, numerals, and punctuation marks. It represents
+                the cohesive aesthetic philosophy conceived by a type designer—dictating proportions,
+                terminal shapes, x-height, and stroke modulation.
+              </p>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                When you speak of <em>Inter</em> or <em>Playfair Display</em>, you are referring to the
+                typeface itself, regardless of weight or point size.
+              </p>
+            </div>
+
+            <div className="bg-white border border-zinc-200 p-5 rounded-lg space-y-2">
+              <h3 className="text-sm font-bold text-zinc-950">
+                Typeface vs. Font
+              </h3>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                While modern designers frequently use the terms interchangeably:
+              </p>
+              <ul className="text-xs text-zinc-600 space-y-1 list-disc list-inside">
+                <li>
+                  <strong className="text-zinc-950">Typeface:</strong> The conceptual design (e.g. <em>Helvetica</em>).
+                </li>
+                <li>
+                  <strong className="text-zinc-950">Font:</strong> The digital file or specific style (e.g. <em>Helvetica Bold 16px</em>).
+                </li>
+              </ul>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                In CSS, <code>font-family</code> designates the typeface, while <code>font-weight</code> and <code>font-size</code> define the active font.
+              </p>
+            </div>
+          </div>
+
+          {/* Section 2: How Typeface Generators Work */}
+          <div className="bg-zinc-50 border border-zinc-200 rounded-lg p-5 space-y-4">
+            <h3 className="text-sm font-bold text-zinc-950">
+              How Modern Typeface Generators Function
+            </h3>
+            <p className="text-xs text-zinc-600 leading-relaxed">
+              Unlike generic generators that substitute standard Latin characters with decorative Unicode
+              mathematical symbols (which break screen readers and accessibility), a professional Typeface Generator
+              operates through real browser rendering pipelines:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+              <div className="p-3 bg-white rounded border border-zinc-200 space-y-1">
+                <span className="text-[10px] font-mono font-bold text-zinc-400">01 / State</span>
+                <h4 className="font-semibold text-xs text-zinc-950">DOM Text Sync</h4>
+                <p className="text-[11px] text-zinc-500 leading-relaxed">
+                  Client-side reactive state binds your custom copy across all preview cards with zero server delay.
+                </p>
+              </div>
+              <div className="p-3 bg-white rounded border border-zinc-200 space-y-1">
+                <span className="text-[10px] font-mono font-bold text-zinc-400">02 / Network</span>
+                <h4 className="font-semibold text-xs text-zinc-950">Zero-CLS Lazy Loading</h4>
+                <p className="text-[11px] text-zinc-500 leading-relaxed">
+                  Web fonts (WOFF2) load on-demand when specimen cards enter your viewport, preserving bandwidth.
+                </p>
+              </div>
+              <div className="p-3 bg-white rounded border border-zinc-200 space-y-1">
+                <span className="text-[10px] font-mono font-bold text-zinc-400">03 / Layout</span>
+                <h4 className="font-semibold text-xs text-zinc-950">CSS Variables</h4>
+                <p className="text-[11px] text-zinc-500 leading-relaxed">
+                  Optical properties update instantly via CSS rules processed directly by the browser layout engine.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 3: Comparative Typography Classification Table */}
+          <div className="space-y-3">
+            <h3 className="text-sm font-bold text-zinc-950">
+              Typeface Classifications &amp; Digital Use Cases
+            </h3>
+            <div className="scroll-touch-x border border-zinc-200 rounded-lg bg-white">
+              <table className="w-full min-w-[560px] text-left text-xs">
+                <thead className="bg-zinc-50 border-b border-zinc-200 text-zinc-950 font-semibold">
+                  <tr>
+                    <th className="p-3">Category</th>
+                    <th className="p-3">Key Traits</th>
+                    <th className="p-3">Readability Profile</th>
+                    <th className="p-3">Digital Use Case</th>
+                    <th className="p-3">Examples</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-100 text-zinc-600">
+                  <tr className="hover:bg-zinc-50/50 transition-colors">
+                    <td className="p-3 font-semibold text-zinc-950">Sans-Serif</td>
+                    <td className="p-3">Clean terminals, monolinear stroke weight</td>
+                    <td className="p-3">High screen legibility across small sizes</td>
+                    <td className="p-3">Websites, mobile apps, UI dashboards</td>
+                    <td className="p-3 font-mono text-[11px]">Inter, DM Sans</td>
+                  </tr>
+                  <tr className="hover:bg-zinc-50/50 transition-colors">
+                    <td className="p-3 font-semibold text-zinc-950">Serif</td>
+                    <td className="p-3">Terminal feet, optical stroke modulation</td>
+                    <td className="p-3">High horizontal reading flow in long text</td>
+                    <td className="p-3">Editorial publications, book copy</td>
+                    <td className="p-3 font-mono text-[11px]">Playfair, Newsreader</td>
+                  </tr>
+                  <tr className="hover:bg-zinc-50/50 transition-colors">
+                    <td className="p-3 font-semibold text-zinc-950">Slab Serif</td>
+                    <td className="p-3">Heavy, rectangular block serifs</td>
+                    <td className="p-3">High impact, industrial stability</td>
+                    <td className="p-3">Headings, tech branding, posters</td>
+                    <td className="p-3 font-mono text-[11px]">Roboto Slab, Arvo</td>
+                  </tr>
+                  <tr className="hover:bg-zinc-50/50 transition-colors">
+                    <td className="p-3 font-semibold text-zinc-950">Monospace</td>
+                    <td className="p-3">Uniform character width across all glyphs</td>
+                    <td className="p-3">Precise columnar alignment</td>
+                    <td className="p-3">Code editors, data tables, terminal</td>
+                    <td className="p-3 font-mono text-[11px]">JetBrains Mono, Space Mono</td>
+                  </tr>
+                  <tr className="hover:bg-zinc-50/50 transition-colors">
+                    <td className="p-3 font-semibold text-zinc-950">Display</td>
+                    <td className="p-3">Exaggerated proportions, high personality</td>
+                    <td className="p-3">Commanding at &gt;32px; avoid for body copy</td>
+                    <td className="p-3">Posters, hero titles, logos</td>
+                    <td className="p-3 font-mono text-[11px]">Bricolage Grotesque, Syne</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Section 4: Internal Links Grid */}
+          <div className="pt-4 space-y-3">
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400">
+              Specialized Typography Studios
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+              <Link
+                href="/font-pairing-generator"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Font Pairing Tool</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+              <Link
+                href="/font-tester"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Font Tester</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+              <Link
+                href="/typography-generator"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Type Scale Tool</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+              <Link
+                href="/serif-typeface-generator"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Serif Typefaces</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+              <Link
+                href="/sans-serif-typeface-generator"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Sans-Serif</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+              <Link
+                href="/display-typeface-generator"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Display Fonts</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+              <Link
+                href="/monospace-typeface-generator"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Monospace</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+              <Link
+                href="/script-typeface-generator"
+                className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
+              >
+                <span>Script Fonts</span>
+                <ArrowRight className="w-3 h-3 text-zinc-400" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. AUTHORITATIVE FAQ SECTION */}
+        <FAQSection />
+      </div>
+    </>
+  );
+}

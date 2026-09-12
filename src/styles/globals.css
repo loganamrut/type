@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 240 5.9% 10%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.375rem;
+
+    --preview-bg-white: #ffffff;
+    --preview-text-black: #09090b;
+    --preview-bg-offwhite: #fafafa;
+    --preview-bg-paper: #f8f8f6;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background-color: #ffffff;
+    color: #09090b;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #09090b;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    min-width: 320px;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button, input, select, textarea, a {
+    touch-action: manipulation;
+  }
+}
+
+/* Minimalist specimen preview container with stable height to prevent CLS */
+.typeface-preview-box {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  transition: opacity 0.15s ease;
+}
+
+/* Mobile smooth touch horizontal scrolling */
+.scroll-touch-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.scroll-touch-x::-webkit-scrollbar {
+  display: none;
+}
+
+/* Crisp minimal scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}

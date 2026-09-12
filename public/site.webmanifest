@@ -1,0 +1,16 @@
+{
+  "name": "TypefaceGen - Online Typeface Generator & Studio",
+  "short_name": "TypefaceGen",
+  "description": "Preview, test, compare, and pair typefaces online with custom text, modular type scales, and CSS export.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
