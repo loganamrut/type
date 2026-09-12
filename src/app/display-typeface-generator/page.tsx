@@ -76,6 +76,9 @@ export default function DisplayTypefacePage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="CollectionPage"
+        pageTitle="Display Typeface Generator - Preview Bold & Headline Fonts Online"
+        pageDescription="Preview and test expressive display and editorial typefaces. Craft high-impact hero titles, poster typography, and bold brand identities."
         toolName="TypefaceGen Display Typeface Generator"
         toolDescription="Preview and test expressive display and editorial typefaces. Craft high-impact hero titles, poster typography, and bold brand identities."
         url="https://typefacegen.com/display-typeface-generator"
@@ -84,6 +87,17 @@ export default function DisplayTypefacePage() {
           { name: 'Display Typeface Generator', item: 'https://typefacegen.com/display-typeface-generator' },
         ]}
         faqs={displayFaqs}
+        itemList={{
+          name: 'Featured Display Typefaces',
+          description: 'Expressive headline and poster typefaces on TypefaceGen.',
+          items: [
+            { name: 'Bebas Neue', description: 'All-caps condensed display powerhouse for punchy headlines.' },
+            { name: 'Abril Fatface', description: 'Didone-inspired titling font with extreme stroke contrast.' },
+            { name: 'Righteous', description: 'Art Deco geometric display typeface with retro-futuristic styling.' },
+            { name: 'Cinzel Decorative', description: 'Classical Roman uppercase font embellished with elegant swashes.' },
+            { name: 'Syne', description: 'Artistic geometric typeface designed for cutting-edge cultural branding.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

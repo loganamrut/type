@@ -72,6 +72,9 @@ export default function FontTesterPage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="ItemPage"
+        pageTitle="Font Tester - Compare & Test Typefaces Online Side-by-Side"
+        pageDescription="Inspect 2 to 4 typefaces simultaneously with synchronized custom text, weight testing, and glyph matrices."
         toolName="TypefaceGen Font Tester & Comparison"
         toolDescription="Inspect 2 to 4 typefaces simultaneously with synchronized custom text, weight testing, and glyph matrices."
         url="https://typefacegen.com/font-tester"
@@ -80,6 +83,15 @@ export default function FontTesterPage() {
           { name: 'Font Tester', item: 'https://typefacegen.com/font-tester' },
         ]}
         faqs={testerFaqs}
+        howTo={{
+          name: 'How to Compare Typefaces Side-by-Side Online with TypefaceGen',
+          description: 'A 3-step guide to testing font rendering, aperture shapes, and stroke weights across multiple typefaces simultaneously.',
+          steps: [
+            { name: 'Select Typefaces', text: 'Choose 2 to 4 typefaces from the curated library to compare side-by-side.' },
+            { name: 'Type Synchronized Copy', text: 'Enter custom test copy to instantly render across all active specimen columns.' },
+            { name: 'Inspect Letterforms', text: 'Examine optical proportions, x-height balance, and stroke weight modulation before copying CSS.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

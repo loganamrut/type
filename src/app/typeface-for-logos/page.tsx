@@ -75,6 +75,9 @@ export default function TypefaceForLogosPage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="CollectionPage"
+        pageTitle="Typeface for Logos - Preview & Test Wordmark Fonts Online"
+        pageDescription="Discover and test the best typefaces for logos, brand identity, and wordmarks with live custom text and optical inspection."
         toolName="TypefaceGen Logo & Wordmark Typeface Studio"
         toolDescription="Discover and test the best typefaces for logos, brand identity, and wordmarks with live custom text and optical inspection."
         url="https://typefacegen.com/typeface-for-logos"
@@ -83,6 +86,17 @@ export default function TypefaceForLogosPage() {
           { name: 'Typeface for Logos', item: 'https://typefacegen.com/typeface-for-logos' },
         ]}
         faqs={logoFaqs}
+        itemList={{
+          name: 'Top Typefaces for Logos & Brand Identity',
+          description: 'High-impact open-source wordmark and logotype fonts on TypefaceGen.',
+          items: [
+            { name: 'Montserrat', description: 'Clean geometric sans-serif ideal for modern tech branding.' },
+            { name: 'Cinzel', description: 'Classical Roman uppercase proportions for luxury and heritage logos.' },
+            { name: 'Bebas Neue', description: 'Tall condensed sans-serif for bold sports and entertainment marks.' },
+            { name: 'Playfair Display', description: 'High-contrast serif projecting premium boutique elegance.' },
+            { name: 'Syne', description: 'Distinctive avant-garde geometric letterforms for creative studios.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

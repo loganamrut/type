@@ -76,6 +76,9 @@ export default function SerifTypefacePage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="CollectionPage"
+        pageTitle="Serif Typeface Generator - Preview & Test Serif Fonts Online"
+        pageDescription="Explore, preview, and test classic, editorial, and modern serif typefaces with live custom text and CSS export."
         toolName="TypefaceGen Serif Typeface Generator"
         toolDescription="Explore, preview, and test classic, editorial, and modern serif typefaces with live custom text and CSS export."
         url="https://typefacegen.com/serif-typeface-generator"
@@ -84,6 +87,17 @@ export default function SerifTypefacePage() {
           { name: 'Serif Typeface Generator', item: 'https://typefacegen.com/serif-typeface-generator' },
         ]}
         faqs={serifFaqs}
+        itemList={{
+          name: 'Featured Serif Typefaces',
+          description: 'Popular editorial and book serif fonts available in TypefaceGen.',
+          items: [
+            { name: 'Playfair Display', description: 'Transitional high-contrast editorial headline serif.' },
+            { name: 'Merriweather', description: 'Engineered for exceptional screen reading comfort at body sizes.' },
+            { name: 'Lora', description: 'Contemporary serif with warm calligraphic curves.' },
+            { name: 'Cinzel', description: 'Classical Roman proportions inspired by first-century inscriptions.' },
+            { name: 'Newsreader', description: 'Designed specifically for continuous on-screen editorial reading.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

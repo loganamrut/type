@@ -76,6 +76,9 @@ export default function SansSerifTypefacePage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="CollectionPage"
+        pageTitle="Sans-Serif Typeface Generator - Preview Clean & Modern Sans Fonts"
+        pageDescription="Test, preview, and compare clean sans-serif typefaces online. Explore neo-grotesque, geometric, and humanist sans fonts."
         toolName="TypefaceGen Sans-Serif Typeface Generator"
         toolDescription="Test, preview, and compare clean sans-serif typefaces online. Explore neo-grotesque, geometric, and humanist sans fonts."
         url="https://typefacegen.com/sans-serif-typeface-generator"
@@ -84,6 +87,17 @@ export default function SansSerifTypefacePage() {
           { name: 'Sans-Serif Typeface Generator', item: 'https://typefacegen.com/sans-serif-typeface-generator' },
         ]}
         faqs={sansFaqs}
+        itemList={{
+          name: 'Featured Sans-Serif Typefaces',
+          description: 'Top screen-optimized sans-serif fonts available in TypefaceGen.',
+          items: [
+            { name: 'Inter', description: 'Industry standard for digital user interfaces with tall x-height.' },
+            { name: 'Roboto', description: 'Google signature neo-grotesque typeface balancing geometric and curved shapes.' },
+            { name: 'Montserrat', description: 'Geometric sans-serif with wide proportions and architectural clarity.' },
+            { name: 'Plus Jakarta Sans', description: 'Modern clean grotesque engineered for enterprise SaaS interfaces.' },
+            { name: 'Poppins', description: 'Pure geometric sans-serif based on precise circles and lines.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

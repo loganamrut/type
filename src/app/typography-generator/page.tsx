@@ -71,6 +71,9 @@ export default function TypographyGeneratorPage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="ItemPage"
+        pageTitle="Typography Generator - Modular Type Scale & Hierarchy Calculator"
+        pageDescription="Calculate harmonious typography scales and modular hierarchies. Export production-ready CSS variables and Tailwind config tokens."
         toolName="TypefaceGen Modular Typography Scale Generator"
         toolDescription="Calculate harmonious typography scales and modular hierarchies. Export production-ready CSS variables and Tailwind config tokens."
         url="https://typefacegen.com/typography-generator"
@@ -79,6 +82,16 @@ export default function TypographyGeneratorPage() {
           { name: 'Typography Generator', item: 'https://typefacegen.com/typography-generator' },
         ]}
         faqs={scaleFaqs}
+        howTo={{
+          name: 'How to Build a Modular Typography Scale with TypefaceGen',
+          description: 'A 4-step workflow for calculating mathematical typographic hierarchies and exporting Tailwind/CSS design tokens.',
+          steps: [
+            { name: 'Set Base Size', text: 'Enter your body text size (typically 16px) as the typographic foundation.' },
+            { name: 'Select Ratio', text: 'Choose a geometric progression (Minor Third 1.200, Major Third 1.250, Perfect Fourth 1.333, Golden Ratio 1.618).' },
+            { name: 'Evaluate Scale Steps', text: 'Review live font specimens rendered from xs to 4xl across headings, subtitles, and captions.' },
+            { name: 'Export Code Tokens', text: 'Click [Copy CSS Variables] or [Copy Tailwind Config] to integrate with your codebase.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

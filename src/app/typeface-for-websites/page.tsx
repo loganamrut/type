@@ -76,6 +76,9 @@ export default function TypefaceForWebsitesPage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="CollectionPage"
+        pageTitle="Typeface for Websites - Preview & Optimize Web Typography Online"
+        pageDescription="Test and optimize typefaces for modern websites, web applications, and digital interfaces with live custom text and CSS tokens."
         toolName="TypefaceGen Web Typography & Core Web Vitals Studio"
         toolDescription="Test and optimize typefaces for modern websites, web applications, and digital interfaces with live custom text and CSS tokens."
         url="https://typefacegen.com/typeface-for-websites"
@@ -84,6 +87,17 @@ export default function TypefaceForWebsitesPage() {
           { name: 'Typeface for Websites', item: 'https://typefacegen.com/typeface-for-websites' },
         ]}
         faqs={websiteFaqs}
+        itemList={{
+          name: 'Top Web & UI Typefaces',
+          description: 'High-performance web fonts optimized for Core Web Vitals and low CLS.',
+          items: [
+            { name: 'Inter', description: 'Screen-optimized grotesque with tall x-height and open apertures.' },
+            { name: 'Plus Jakarta Sans', description: 'Contemporary sans-serif designed for modern SaaS web applications.' },
+            { name: 'DM Sans', description: 'Geometric sans-serif tuned for high-density dashboard interfaces.' },
+            { name: 'Roboto', description: 'High-performance sans-serif with natural reading rhythm across platforms.' },
+            { name: 'Lora', description: 'Modern reading serif with calligraphic roots, perfect for blog body text.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

@@ -72,6 +72,9 @@ export default function FontPairingPage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="ItemPage"
+        pageTitle="Font Pairing Generator - Free Typography Combinations & Tester"
+        pageDescription="Generate and preview harmonious font combinations online. Match headings with body copy with curated typographic contrast and CSS code."
         toolName="TypefaceGen Font Pairing Generator"
         toolDescription="Generate and preview harmonious font combinations online. Match headings with body copy with curated typographic contrast and CSS code."
         url="https://typefacegen.com/font-pairing-generator"
@@ -80,6 +83,16 @@ export default function FontPairingPage() {
           { name: 'Font Pairing Generator', item: 'https://typefacegen.com/font-pairing-generator' },
         ]}
         faqs={pairingFaqs}
+        howTo={{
+          name: 'How to Generate Harmonious Font Pairings with TypefaceGen',
+          description: 'A 4-step guide to discovering, evaluating, and exporting complementary heading and body typography systems.',
+          steps: [
+            { name: 'Choose Heading Typeface', text: 'Select a primary heading font or hit Randomize to discover curated combinations.' },
+            { name: 'Contrast with Body Copy', text: 'Pair with an open x-height body font (such as Inter, Lora, or Roboto) for effortless legibility.' },
+            { name: 'Test Custom Copy', text: 'Enter your project headline and body paragraph to assess visual balance at scale.' },
+            { name: 'Export Pairing CSS', text: 'Click [Copy Pairing CSS] to copy production CSS variables and Google Font imports.' },
+          ],
+        }}
       />
 
       {/* Page Header */}

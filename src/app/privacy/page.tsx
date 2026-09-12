@@ -52,6 +52,11 @@ export default function PrivacyPage() {
     <div className="space-y-8 max-w-3xl mx-auto">
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
+        type="website"
+        pageType="WebPage"
+        pageTitle="Privacy Policy - Zero Tracking Client-Side Architecture"
+        pageDescription="TypefaceGen Privacy Policy. We do not store, transmit, or monitor your typed text. All typography generation occurs strictly within your browser."
+        url="https://typefacegen.com/privacy"
         breadcrumbs={[
           { name: 'Home', item: 'https://typefacegen.com/' },
           { name: 'Privacy Policy', item: 'https://typefacegen.com/privacy' },

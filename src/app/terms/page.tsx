@@ -52,6 +52,11 @@ export default function TermsPage() {
     <div className="space-y-8 max-w-3xl mx-auto">
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
+        type="website"
+        pageType="WebPage"
+        pageTitle="Terms of Service & Licensing - TypefaceGen"
+        pageDescription="Terms of Service and open-source font licensing information for TypefaceGen. Free for commercial and personal typography workflows."
+        url="https://typefacegen.com/terms"
         breadcrumbs={[
           { name: 'Home', item: 'https://typefacegen.com/' },
           { name: 'Terms of Service', item: 'https://typefacegen.com/terms' },

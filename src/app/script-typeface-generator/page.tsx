@@ -76,6 +76,9 @@ export default function ScriptTypefacePage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="CollectionPage"
+        pageTitle="Script Typeface Generator - Preview Cursive & Handwritten Fonts"
+        pageDescription="Test and preview cursive, calligraphic, and handwritten script typefaces with live custom text and CSS export."
         toolName="TypefaceGen Script & Handwritten Typeface Generator"
         toolDescription="Test and preview cursive, calligraphic, and handwritten script typefaces with live custom text and CSS export."
         url="https://typefacegen.com/script-typeface-generator"
@@ -84,6 +87,17 @@ export default function ScriptTypefacePage() {
           { name: 'Script Typeface Generator', item: 'https://typefacegen.com/script-typeface-generator' },
         ]}
         faqs={scriptFaqs}
+        itemList={{
+          name: 'Featured Script & Handwritten Typefaces',
+          description: 'Cursive, brush, and personal handwritten fonts on TypefaceGen.',
+          items: [
+            { name: 'Dancing Script', description: 'Lively casual script where letters bounce gently along the baseline.' },
+            { name: 'Pacifico', description: 'Original brush script inspired by 1950s American surf culture.' },
+            { name: 'Great Vibes', description: 'Flowing connecting script with elegant ascenders and descenders.' },
+            { name: 'Sacramento', description: 'Monoline semi-connected script inspired by mid-century hand-lettering.' },
+            { name: 'Caveat', description: 'Casual open-loop handwriting font suitable for informal notes and annotations.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

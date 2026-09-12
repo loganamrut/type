@@ -6,7 +6,8 @@ import { TypefaceGenerator } from '@/components/TypefaceGenerator';
 import { TypefacePairing } from '@/components/TypefacePairing';
 import { TypefaceComparison } from '@/components/TypefaceComparison';
 import { TypeScaleTool } from '@/components/TypeScaleTool';
-import { FAQSection, FAQS_DATA } from '@/components/FAQSection';
+import { FAQSection } from '@/components/FAQSection';
+import { FAQS_DATA } from '@/lib/faqs-data';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
@@ -66,11 +67,35 @@ export default function HomePage() {
     <>
       <JsonLd
         type="website"
+        pageType="ItemPage"
+        pageTitle="Typeface Generator - Preview, Compare & Pair Fonts Online"
+        pageDescription="Free online typeface generator to preview, compare, and pair 200+ Google & open-source typefaces with live custom text, modular scales, and instant CSS export."
         url="https://typefacegen.com/"
         toolName="Typeface Generator & Online Typography Studio"
         toolDescription="Free online typeface generator to preview, compare, and pair 200+ Google & open-source typefaces with live custom text, modular scales, and instant CSS export."
         faqs={FAQS_DATA}
         breadcrumbs={[{ name: 'Typeface Generator', item: 'https://typefacegen.com/' }]}
+        howTo={{
+          name: 'How to Preview and Test Typefaces Online with TypefaceGen',
+          description: 'A 4-step workflow for previewing custom text across curated open-source typefaces and generating production CSS.',
+          steps: [
+            { name: 'Enter Custom Copy', text: 'Type or paste your headline, tagline, or sample paragraph into the live reactive text editor.' },
+            { name: 'Filter & Search', text: 'Filter by category (Serif, Sans-Serif, Display, Monospace, Script) or search by font name.' },
+            { name: 'Adjust Typography Metrics', text: 'Click [Expand] to fine-tune font size, weight, line-height, letter spacing, and canvas background.' },
+            { name: 'Copy & Export Code', text: 'Click [Copy] for styled Unicode or [CSS] to export clean @import rules and Tailwind classes.' },
+          ],
+        }}
+        itemList={{
+          name: 'Top Curated Typefaces',
+          description: 'Leading open-source typefaces featured on TypefaceGen.',
+          items: [
+            { name: 'Inter', description: 'Modern variable sans-serif engineered for maximum legibility on digital screens.' },
+            { name: 'Playfair Display', description: 'Transitional high-contrast editorial serif inspired by John Baskerville.' },
+            { name: 'JetBrains Mono', description: 'Developer-focused monospace font with increased lowercase height.' },
+            { name: 'Lora', description: 'Contemporary serif designed for long-form editorial reading.' },
+            { name: 'Montserrat', description: 'Geometric sans-serif inspired by urban typography in Buenos Aires.' },
+          ],
+        }}
       />
 
       <div className="space-y-12 sm:space-y-16">

@@ -76,6 +76,9 @@ export default function MonospaceTypefacePage() {
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
         type="tool"
+        pageType="CollectionPage"
+        pageTitle="Monospace Typeface Generator - Test Coding & Fixed-Width Fonts"
+        pageDescription="Preview and test monospace and coding typefaces online. Compare programming ligatures, tabular glyph alignment, and technical legibility."
         toolName="TypefaceGen Monospace Typeface Generator"
         toolDescription="Preview and test monospace and coding typefaces online. Compare programming ligatures, tabular glyph alignment, and technical legibility."
         url="https://typefacegen.com/monospace-typeface-generator"
@@ -84,6 +87,17 @@ export default function MonospaceTypefacePage() {
           { name: 'Monospace Typeface Generator', item: 'https://typefacegen.com/monospace-typeface-generator' },
         ]}
         faqs={monoFaqs}
+        itemList={{
+          name: 'Featured Monospace Typefaces',
+          description: 'Developer-preferred fixed-width and programming typefaces.',
+          items: [
+            { name: 'JetBrains Mono', description: 'Monospace font crafted specifically for code legibility.' },
+            { name: 'Roboto Mono', description: 'Google geometric monospace with crisp screen rendering.' },
+            { name: 'Fira Code', description: 'Monospace typeface with custom programming multi-character ligatures.' },
+            { name: 'Source Code Pro', description: 'Adobe open-source monospace designed for UI and terminals.' },
+            { name: 'Space Mono', description: 'Eclectic retro-futuristic fixed-width font developed by Colophon.' },
+          ],
+        }}
       />
 
       <div className="space-y-1.5 max-w-2xl">

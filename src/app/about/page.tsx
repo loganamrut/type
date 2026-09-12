@@ -50,6 +50,11 @@ export default function AboutPage() {
     <div className="space-y-8 max-w-3xl mx-auto">
       <Breadcrumbs items={breadcrumbs} />
       <JsonLd
+        type="website"
+        pageType="AboutPage"
+        pageTitle="About TypefaceGen - Mission, Technology & Privacy Architecture"
+        pageDescription="Learn about TypefaceGen, our mission to build the fastest, most useful online typography studio, our privacy-first client-side architecture, and open font licensing."
+        url="https://typefacegen.com/about"
         breadcrumbs={[
           { name: 'Home', item: 'https://typefacegen.com/' },
           { name: 'About', item: 'https://typefacegen.com/about' },
