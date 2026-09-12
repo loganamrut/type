@@ -15,22 +15,26 @@ export const viewport: Viewport = {
   colorScheme: 'light',
 };
 
+// next/font handles preloading & self-hosting — no manual Google Fonts <link> needed
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  preload: true,
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-jetbrains-mono',
+  preload: false, // Secondary font — load on demand
 });
 
 const newsreader = Newsreader({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-newsreader',
+  preload: false, // Secondary font — load on demand
 });
 
 export const metadata: Metadata = {
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
     template: '%s | TypefaceGen',
   },
   description:
-    'Use our free typeface generator to preview, compare, and pair typefaces online. Test your custom text across curated open-source fonts, modular type scales, weights, and typography styles.',
+    'Free typeface generator to preview, compare, and pair 200+ fonts online. Test custom text, modular scales, and copy CSS instantly.',
   keywords: [
     'typeface generator',
     'typeface generator online',
@@ -134,23 +138,26 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable} ${newsreader.variable} bg-white text-zinc-950`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* dns-prefetch fallback for older browsers that don't support preconnect */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-white text-zinc-950">
+        {/*
+          Google Consent Mode v2 — MUST run before gtag.js loads.
+          Using beforeInteractive so it executes before any hydration.
+        */}
         <Script
           id="google-consent-mode"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
 
               var storedConsent = null;
-              try {
-                storedConsent = localStorage.getItem('typefacegen_consent');
-              } catch(e) {}
-
+              try { storedConsent = localStorage.getItem('typefacegen_consent'); } catch(e) {}
               var isGranted = storedConsent === 'granted';
 
               gtag('consent', 'default', {
@@ -160,7 +167,24 @@ export default function RootLayout({
                 'ad_personalization': 'denied',
                 'wait_for_update': 500
               });
-
+            `,
+          }}
+        />
+        {/*
+          GA4 — lazyOnload defers loading until page is fully idle.
+          This prevents GA from competing with LCP and FID on mobile.
+        */}
+        <Script
+          strategy="lazyOnload"
+          src="https://www.googletagmanager.com/gtag/js?id=G-HT87NWEHNT"
+        />
+        <Script
+          id="ga4-config"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-HT87NWEHNT', {
                 page_path: window.location.pathname,
@@ -169,10 +193,6 @@ export default function RootLayout({
               });
             `,
           }}
-        />
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-HT87NWEHNT"
         />
         <AnalyticsTracker />
         <Header />

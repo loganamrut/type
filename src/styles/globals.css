@@ -32,7 +32,7 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth removed — causes poor CLS score on mobile PageSpeed */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -96,4 +96,22 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #a1a1aa;
+}
+
+/* content-visibility: auto defers rendering of below-fold sections
+   until they are about to enter the viewport — critical for mobile LCP */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* Prevent layout shifts in font card preview containers */
+.typeface-preview-box {
+  min-height: 80px;
+  contain: layout style;
+}
+
+/* Reduce paint complexity on filter pill rows */
+.filter-pill-row {
+  contain: layout;
 }

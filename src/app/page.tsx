@@ -102,23 +102,23 @@ export default function HomePage() {
         {/* 1. PRIMARY CORE PRODUCT (ABOVE THE FOLD) */}
         <TypefaceGenerator />
 
-        {/* 2. TYPEFACE PAIRING GENERATOR SECTION */}
-        <section className="pt-6 border-t border-zinc-200">
+        {/* 2. TYPEFACE PAIRING GENERATOR SECTION — below fold: content-visibility deferred */}
+        <section className="pt-6 border-t border-zinc-200 cv-auto">
           <TypefacePairing />
         </section>
 
-        {/* 3. SIDE-BY-SIDE TYPEFACE INSPECTOR / TESTER */}
-        <section className="pt-6 border-t border-zinc-200">
+        {/* 3. SIDE-BY-SIDE TYPEFACE INSPECTOR / TESTER — below fold */}
+        <section className="pt-6 border-t border-zinc-200 cv-auto">
           <TypefaceComparison initialFontIds={['inter', 'playfair-display', 'newsreader']} />
         </section>
 
-        {/* 4. MODULAR TYPE SCALE CALCULATOR */}
-        <section className="pt-6 border-t border-zinc-200">
+        {/* 4. MODULAR TYPE SCALE CALCULATOR — below fold */}
+        <section className="pt-6 border-t border-zinc-200 cv-auto">
           <TypeScaleTool />
         </section>
 
-        {/* 5. EDITORIAL & EDUCATIONAL TYPOGRAPHY AUTHORITY */}
-        <section className="pt-8 border-t border-zinc-200 space-y-12">
+        {/* 5. EDITORIAL & EDUCATIONAL TYPOGRAPHY AUTHORITY — below fold */}
+        <section className="pt-8 border-t border-zinc-200 space-y-12 cv-auto">
           {/* Header */}
           <div className="space-y-1.5 max-w-2xl">
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950">
