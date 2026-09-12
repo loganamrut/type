@@ -115,11 +115,20 @@ export default function PrivacyPage() {
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-lg font-bold text-foreground">4. Analytics & Cookies</h2>
+          <h2 className="text-lg font-bold text-foreground">4. Cookies &amp; Google Analytics 4</h2>
           <p>
-            TypefaceGen operates without tracking cookies or invasive third-party ad pixels. If anonymous performance
-            telemetry is enabled to measure Core Web Vitals, it aggregates only anonymized page-load timings and never
-            tracks user identities or typed strings.
+            TypefaceGen utilizes Google Analytics 4 (Measurement ID: <code>G-HT87NWEHNT</code>) to gather aggregate,
+            anonymized telemetry on page visits, route transitions, and tool performance. This helps us optimize font loading
+            speeds and improve interface responsiveness.
+          </p>
+          <p>
+            We implement <strong>Google Consent Mode v2</strong> and IP anonymization. Analytics cookies are only stored
+            if you explicitly consent via our cookie banner. If you choose &ldquo;Essential Only&rdquo;, analytics storage is
+            denied and no tracking cookies are placed on your device.
+          </p>
+          <p>
+            You can change or revoke your cookie preferences at any time by clicking the &ldquo;Cookie Preferences&rdquo; link
+            in our website footer.
           </p>
         </section>
 

@@ -1,8 +1,16 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const handleOpenCookies = () => {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('open-cookie-settings'));
+    }
+  };
 
   return (
     <footer className="w-full border-t border-zinc-200 bg-white text-zinc-950 mt-auto text-xs">
@@ -17,7 +25,7 @@ export function Footer() {
               Minimalist online typeface generator, pairing engine, and typography scale tool.
             </p>
             <p className="text-zinc-400 text-[11px]">
-              100% Client-side. No tracking.
+              Privacy-conscious typography tools.
             </p>
           </div>
 
@@ -114,6 +122,15 @@ export function Footer() {
                 <Link href="/terms" className="hover:text-zinc-950 transition-colors">
                   Terms & Licensing
                 </Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={handleOpenCookies}
+                  className="hover:text-zinc-950 transition-colors text-left"
+                >
+                  Cookie Preferences
+                </button>
               </li>
             </ul>
           </div>
