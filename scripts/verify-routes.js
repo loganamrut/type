@@ -17,7 +17,15 @@ const routes = [
   '/terms',
   '/sitemap.xml',
   '/robots.txt',
+  '/favicon.ico',
   '/favicon.svg',
+  '/favicon-48x48.png',
+  '/favicon-32x32.png',
+  '/favicon-16x16.png',
+  '/apple-touch-icon.png',
+  '/apple-touch-icon-precomposed.png',
+  '/android-chrome-192x192.png',
+  '/android-chrome-512x512.png',
   '/og-image.png',
   '/site.webmanifest',
 ];
@@ -51,7 +59,7 @@ async function run() {
       continue;
     }
 
-    if (r.endsWith('.xml') || r.endsWith('.txt') || r.endsWith('.svg') || r.endsWith('.png') || r.endsWith('.webmanifest')) {
+    if (r.endsWith('.xml') || r.endsWith('.txt') || r.endsWith('.svg') || r.endsWith('.png') || r.endsWith('.ico') || r.endsWith('.webmanifest')) {
       console.log(`✅ [${res.statusCode}] ${r} (${res.headers['content-type'] || 'binary'})`);
       if (r === '/robots.txt') {
         const hasSitemap = res.body.includes('sitemap.xml');
