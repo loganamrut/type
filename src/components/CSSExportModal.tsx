@@ -87,13 +87,13 @@ module.exports = {
             <h2 id="modal-title" className="text-base font-bold text-zinc-950">
               CSS &amp; Implementation: {typeface.name}
             </h2>
-            <p className="text-[11px] text-zinc-400 mt-0.5">
+            <p className="text-[11px] text-zinc-600 mt-0.5">
               Valid CSS, HTML &amp; Tailwind code ready to copy.
             </p>
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center text-zinc-400 hover:text-zinc-950 rounded transition-colors active:scale-95"
+            className="w-8 h-8 flex items-center justify-center text-zinc-500 hover:text-zinc-950 rounded transition-colors active:scale-95"
             aria-label="Close modal"
           >
             <X className="w-4 h-4" />
@@ -101,7 +101,7 @@ module.exports = {
         </div>
 
         {/* License */}
-        <div className="bg-zinc-50 border border-zinc-200 rounded p-2.5 flex items-center justify-between text-[11px] text-zinc-500">
+        <div className="bg-zinc-50 border border-zinc-200 rounded p-2.5 flex items-center justify-between text-[11px] text-zinc-600">
           <span>{typeface.license} · Free for commercial use</span>
           <a
             href={typeface.licenseUrl}
@@ -116,10 +116,10 @@ module.exports = {
         {/* 1. CSS */}
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase text-zinc-400">1. CSS Rule</span>
+            <span className="font-mono text-[11px] uppercase text-zinc-600">1. CSS Rule</span>
             <button
               onClick={() => copyToClipboard(cssSnippet, 'css')}
-              className="text-zinc-500 hover:text-zinc-950 flex items-center gap-1"
+              className="text-zinc-600 hover:text-zinc-950 flex items-center gap-1"
             >
               {copiedSection === 'css' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
               <span>{copiedSection === 'css' ? 'Copied' : 'Copy'}</span>
@@ -133,10 +133,10 @@ module.exports = {
         {/* 2. HTML Embed */}
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase text-zinc-400">2. HTML &lt;link&gt;</span>
+            <span className="font-mono text-[11px] uppercase text-zinc-600">2. HTML &lt;link&gt;</span>
             <button
               onClick={() => copyToClipboard(htmlEmbedSnippet, 'html')}
-              className="text-zinc-500 hover:text-zinc-950 flex items-center gap-1"
+              className="text-zinc-600 hover:text-zinc-950 flex items-center gap-1"
             >
               {copiedSection === 'html' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
               <span>{copiedSection === 'html' ? 'Copied' : 'Copy'}</span>
@@ -150,10 +150,10 @@ module.exports = {
         {/* 3. CSS @import */}
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase text-zinc-400">3. CSS @import</span>
+            <span className="font-mono text-[11px] uppercase text-zinc-600">3. CSS @import</span>
             <button
               onClick={() => copyToClipboard(cssImportSnippet, 'import')}
-              className="text-zinc-500 hover:text-zinc-950 flex items-center gap-1"
+              className="text-zinc-600 hover:text-zinc-950 flex items-center gap-1"
             >
               {copiedSection === 'import' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
               <span>{copiedSection === 'import' ? 'Copied' : 'Copy'}</span>
@@ -167,10 +167,10 @@ module.exports = {
         {/* 4. Tailwind */}
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase text-zinc-400">4. Tailwind CSS</span>
+            <span className="font-mono text-[11px] uppercase text-zinc-600">4. Tailwind CSS</span>
             <button
               onClick={() => copyToClipboard(tailwindSnippet, 'tailwind')}
-              className="text-zinc-500 hover:text-zinc-950 flex items-center gap-1"
+              className="text-zinc-600 hover:text-zinc-950 flex items-center gap-1"
             >
               {copiedSection === 'tailwind' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
               <span>{copiedSection === 'tailwind' ? 'Copied' : 'Copy'}</span>

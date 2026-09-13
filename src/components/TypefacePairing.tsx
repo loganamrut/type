@@ -202,11 +202,12 @@ body, p {
       {/* Live Specimen Preview */}
       <div className="bg-white border border-zinc-200 rounded-lg p-6 space-y-4">
         <div>
-          <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block mb-1">
+          <label htmlFor="pairing-heading-input" className="text-[10px] font-mono uppercase tracking-wider text-zinc-600 block mb-1">
             {headingTypeface.name} (700)
-          </span>
+          </label>
           <input
             id="pairing-heading-input"
+            aria-label="Heading text preview"
             type="text"
             value={headingText}
             onChange={(e) => setHeadingText(e.target.value)}
@@ -219,11 +220,12 @@ body, p {
         </div>
 
         <div>
-          <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block mb-1">
+          <label htmlFor="pairing-body-input" className="text-[10px] font-mono uppercase tracking-wider text-zinc-600 block mb-1">
             {bodyTypeface.name} (400)
-          </span>
+          </label>
           <textarea
             id="pairing-body-input"
+            aria-label="Body text preview"
             rows={3}
             value={bodyText}
             onChange={(e) => setBodyText(e.target.value)}

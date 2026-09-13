@@ -89,7 +89,7 @@ export function Header() {
             {moreOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white border border-zinc-200 rounded-lg shadow-lg py-2 z-50">
                 <div className="px-3 pb-1.5 pt-0.5">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">
                     All Generators
                   </span>
                 </div>
@@ -152,7 +152,7 @@ export function Header() {
 
           {/* Mobile Categories */}
           <div className="pt-2 border-t border-zinc-100 mt-1">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 px-3 block mb-1">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 px-3 block mb-1">
               Type Styles
             </span>
             <div className="grid grid-cols-2 gap-1 text-xs text-zinc-600 px-3">
@@ -179,7 +179,7 @@ export function Header() {
           <div className="pt-2 border-t border-zinc-100 mt-1">
             <button
               onClick={() => setMobileMoreOpen(!mobileMoreOpen)}
-              className="w-full flex items-center justify-between px-3 py-2 text-xs font-mono uppercase tracking-wider text-zinc-400"
+              className="w-full flex items-center justify-between px-3 py-2 text-xs font-mono uppercase tracking-wider text-zinc-600"
             >
               More Generators
               <ChevronDown className={`w-3.5 h-3.5 transition-transform ${mobileMoreOpen ? 'rotate-180' : ''}`} />

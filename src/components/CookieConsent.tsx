@@ -102,9 +102,9 @@ export function CookieConsent() {
                   <Shield className="w-3 h-3 text-emerald-600" />
                   Strictly Necessary (Local Storage)
                 </span>
-                <span className="text-[10px] text-zinc-400 font-mono">Always Active</span>
+                <span className="text-[10px] text-zinc-600 font-mono">Always Active</span>
               </div>
-              <p className="text-zinc-500 text-[10px]">
+              <p className="text-zinc-600 text-[10px]">
                 Stores your bookmarked favorites, side-by-side comparison queue, and editor controls.
               </p>
             </div>
@@ -112,9 +112,9 @@ export function CookieConsent() {
             <div className="p-2.5 rounded bg-zinc-50 border border-zinc-100 space-y-1">
               <div className="flex items-center justify-between font-medium text-zinc-950">
                 <span>Performance &amp; Analytics (GA4)</span>
-                <span className="text-[10px] text-zinc-500 font-mono">Optional</span>
+                <span className="text-[10px] text-zinc-600 font-mono">Optional</span>
               </div>
-              <p className="text-zinc-500 text-[10px]">
+              <p className="text-zinc-600 text-[10px]">
                 Anonymous visitor counts and pageview timings with IP anonymization (Measurement ID: G-HT87NWEHNT).
               </p>
             </div>
@@ -126,7 +126,7 @@ export function CookieConsent() {
           <button
             type="button"
             onClick={() => setShowDetails(!showDetails)}
-            className="text-[11px] text-zinc-500 hover:text-zinc-950 flex items-center gap-1 transition-colors font-medium underline underline-offset-2"
+            className="text-[11px] text-zinc-600 hover:text-zinc-950 flex items-center gap-1 transition-colors font-medium underline underline-offset-2"
           >
             {showDetails ? (
               <>
@@ -158,13 +158,13 @@ export function CookieConsent() {
         </div>
 
         {/* Privacy Policy Link */}
-        <div className="text-[10px] text-zinc-400 text-center">
+        <div className="text-[11px] text-zinc-600 text-center">
           Read our{' '}
-          <Link href="/privacy" className="underline hover:text-zinc-700">
+          <Link href="/privacy" className="underline hover:text-zinc-950 text-zinc-700 font-medium">
             Privacy Policy
           </Link>{' '}
           and{' '}
-          <Link href="/terms" className="underline hover:text-zinc-700">
+          <Link href="/terms" className="underline hover:text-zinc-950 text-zinc-700 font-medium">
             Terms of Service
           </Link>
           .

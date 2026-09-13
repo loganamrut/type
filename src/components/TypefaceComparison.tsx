@@ -92,9 +92,10 @@ export function TypefaceComparison({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 bg-zinc-50 p-3.5 rounded border border-zinc-200 text-xs">
         {/* Sample text */}
         <div className="md:col-span-2 space-y-1">
-          <label htmlFor="comparison-text-input" className="text-zinc-500 font-medium">Text</label>
+          <label htmlFor="comparison-text-input" className="text-zinc-700 font-medium">Text</label>
           <input
             id="comparison-text-input"
+            aria-label="Comparison sample text phrase"
             type="text"
             value={sampleText}
             onChange={(e) => setSampleText(e.target.value)}
@@ -106,12 +107,12 @@ export function TypefaceComparison({
 
         {/* Mode pills */}
         <div className="space-y-1">
-          <span className="text-zinc-500 font-medium block">Mode</span>
+          <span className="text-zinc-700 font-medium block">Mode</span>
           <div className="grid grid-cols-3 gap-1">
             <button
               onClick={() => setInspectionMode('text')}
               className={`py-1.5 rounded transition-colors ${
-                inspectionMode === 'text' ? 'bg-zinc-950 text-white font-medium' : 'bg-white text-zinc-600 hover:bg-zinc-100 border border-zinc-200'
+                inspectionMode === 'text' ? 'bg-zinc-950 text-white font-medium' : 'bg-white text-zinc-700 hover:bg-zinc-100 border border-zinc-200'
               }`}
             >
               Text
@@ -119,7 +120,7 @@ export function TypefaceComparison({
             <button
               onClick={() => setInspectionMode('glyphs')}
               className={`py-1.5 rounded transition-colors ${
-                inspectionMode === 'glyphs' ? 'bg-zinc-950 text-white font-medium' : 'bg-white text-zinc-600 hover:bg-zinc-100 border border-zinc-200'
+                inspectionMode === 'glyphs' ? 'bg-zinc-950 text-white font-medium' : 'bg-white text-zinc-700 hover:bg-zinc-100 border border-zinc-200'
               }`}
             >
               Glyphs
@@ -127,7 +128,7 @@ export function TypefaceComparison({
             <button
               onClick={() => setInspectionMode('numbers')}
               className={`py-1.5 rounded transition-colors ${
-                inspectionMode === 'numbers' ? 'bg-zinc-950 text-white font-medium' : 'bg-white text-zinc-600 hover:bg-zinc-100 border border-zinc-200'
+                inspectionMode === 'numbers' ? 'bg-zinc-950 text-white font-medium' : 'bg-white text-zinc-700 hover:bg-zinc-100 border border-zinc-200'
               }`}
             >
               Numerals
@@ -138,11 +139,12 @@ export function TypefaceComparison({
         {/* Size */}
         <div className="space-y-1">
           <div className="flex justify-between">
-            <label htmlFor="comparison-size-slider" className="text-zinc-500">Size</label>
+            <label htmlFor="comparison-size-slider" className="text-zinc-700">Size</label>
             <span className="font-mono text-zinc-950">{fontSize}px</span>
           </div>
           <input
             id="comparison-size-slider"
+            aria-label="Comparison font size in pixels"
             type="range"
             min={14}
             max={72}
@@ -155,11 +157,12 @@ export function TypefaceComparison({
         {/* Weight */}
         <div className="space-y-1">
           <div className="flex justify-between">
-            <label htmlFor="comparison-weight-slider" className="text-zinc-500">Weight</label>
+            <label htmlFor="comparison-weight-slider" className="text-zinc-700">Weight</label>
             <span className="font-mono text-zinc-950">{syncWeight}</span>
           </div>
           <input
             id="comparison-weight-slider"
+            aria-label="Comparison font weight"
             type="range"
             min={100}
             max={900}
@@ -195,7 +198,7 @@ export function TypefaceComparison({
               </select>
             </div>
           ) : (
-            <span className="text-[11px] text-zinc-400 py-1.5">Max 4 compared.</span>
+            <span className="text-[11px] text-zinc-600 py-1.5">Max 4 compared.</span>
           )}
         </div>
       </div>
@@ -223,14 +226,15 @@ export function TypefaceComparison({
               {/* Column Top */}
               <div className="border-b border-zinc-100 pb-2">
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">
+                  <span className="text-[10px] font-mono text-zinc-600 uppercase">
                     Column {index + 1}
                   </span>
                   {selectedIds.length > 2 && (
                     <button
                       onClick={() => removeFont(tf.id)}
-                      className="p-1 text-zinc-400 hover:text-red-600 rounded"
+                      className="p-1 text-zinc-500 hover:text-red-600 rounded"
                       title="Remove column"
+                      aria-label={`Remove ${tf.name} from comparison`}
                     >
                       <X className="w-3.5 h-3.5" />
                     </button>
@@ -250,7 +254,7 @@ export function TypefaceComparison({
                   ))}
                 </select>
 
-                <div className="flex items-center gap-1.5 mt-1.5 text-[11px] text-zinc-400">
+                <div className="flex items-center gap-1.5 mt-1.5 text-[11px] text-zinc-600">
                   <span className="capitalize">{tf.category}</span>
                   <span>·</span>
                   <span>{closestWeight}w</span>
@@ -273,13 +277,13 @@ export function TypefaceComparison({
               </div>
 
               {/* Specs & Quick Copy */}
-              <div className="pt-2 border-t border-zinc-100 text-[11px] space-y-1.5 text-zinc-400">
+              <div className="pt-2 border-t border-zinc-100 text-[11px] space-y-1.5 text-zinc-600">
                 <div className="flex justify-between">
                   <span>Author:</span>
                   <span className="text-zinc-700 truncate max-w-[120px]">{tf.author}</span>
                 </div>
                 <div className="flex items-center justify-between pt-1">
-                  <span className="font-mono text-zinc-500">{tf.weights.length} weights</span>
+                  <span className="font-mono text-zinc-600">{tf.weights.length} weights</span>
                   <div className="flex items-center gap-1.5">
                     <button
                       onClick={async () => {

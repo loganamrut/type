@@ -50,8 +50,8 @@ export function TypefaceGenerator({
   const [showComparisonDrawer, setShowComparisonDrawer] = useState(false);
   const [activeCSSModalTypeface, setActiveCSSModalTypeface] = useState<Typeface | null>(null);
 
-  // Pagination limit
-  const [displayLimit, setDisplayLimit] = useState(36);
+  // Pagination limit (12 initially for ultra-fast mobile DOM rendering & LCP)
+  const [displayLimit, setDisplayLimit] = useState(12);
 
   useEffect(() => {
     const savedFavs = safeStorage.getItem<string[]>(STORAGE_KEYS.FAVORITES, []);
@@ -234,7 +234,7 @@ export function TypefaceGenerator({
             <button
               onClick={() => setViewMode('grid')}
               className={`w-8 h-8 flex items-center justify-center transition-colors active:scale-95 ${
-                viewMode === 'grid' ? 'bg-zinc-950 text-white' : 'text-zinc-400 hover:text-zinc-950'
+                viewMode === 'grid' ? 'bg-zinc-950 text-white' : 'text-zinc-500 hover:text-zinc-950'
               }`}
               title="Grid View"
               aria-label="Grid View"
@@ -244,7 +244,7 @@ export function TypefaceGenerator({
             <button
               onClick={() => setViewMode('list')}
               className={`w-8 h-8 flex items-center justify-center transition-colors active:scale-95 ${
-                viewMode === 'list' ? 'bg-zinc-950 text-white' : 'text-zinc-400 hover:text-zinc-950'
+                viewMode === 'list' ? 'bg-zinc-950 text-white' : 'text-zinc-500 hover:text-zinc-950'
               }`}
               title="List View"
               aria-label="List View"
@@ -265,12 +265,13 @@ export function TypefaceGenerator({
 
       {/* Responsive Viewport Wrapper */}
       <div className={`transition-all duration-300 ${previewWidthClass}`}>
+        <h2 className="sr-only">Typeface Library &amp; Font Specimen Previews</h2>
         {displayedTypefaces.length === 0 ? (
           <div className="text-center py-16 px-4 border border-dashed border-zinc-200 rounded-lg bg-white">
             <p className="text-sm font-medium text-zinc-950 mb-1">
               No typefaces match your selected criteria.
             </p>
-            <p className="text-xs text-zinc-400 mb-3">
+            <p className="text-xs text-zinc-600 mb-3">
               Try clearing filters or adjusting your search keyword.
             </p>
             <button
@@ -306,8 +307,8 @@ export function TypefaceGenerator({
         {filteredTypefaces.length > displayLimit && (
           <div className="text-center pt-8">
             <button
-              onClick={() => setDisplayLimit((prev) => prev + 36)}
-              className="px-5 py-2 bg-white text-zinc-950 hover:bg-zinc-50 font-medium text-xs rounded border border-zinc-200 transition-colors"
+              onClick={() => setDisplayLimit((prev) => prev + 24)}
+              className="px-5 py-2.5 bg-white text-zinc-950 hover:bg-zinc-50 font-medium text-xs rounded border border-zinc-300 shadow-sm transition-colors"
             >
               Show More Typefaces ({filteredTypefaces.length - displayLimit} remaining)
             </button>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono, Newsreader } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import '@/styles/globals.css';
 import { Header } from '@/components/Header';
@@ -15,26 +15,12 @@ export const viewport: Viewport = {
   colorScheme: 'light',
 };
 
-// next/font handles preloading & self-hosting — no manual Google Fonts <link> needed
+// Next.js font optimization: Only Inter is needed for global UI
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
   preload: true,
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-jetbrains-mono',
-  preload: false, // Secondary font — load on demand
-});
-
-const newsreader = Newsreader({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-newsreader',
-  preload: false, // Secondary font — load on demand
 });
 
 export const metadata: Metadata = {
@@ -135,18 +121,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${newsreader.variable} bg-white text-zinc-950`}
+      className={`${inter.variable} bg-white text-zinc-950`}
     >
       <head>
-        {/* dns-prefetch fallback for older browsers that don't support preconnect */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-white text-zinc-950">
         {/*
-          Google Consent Mode v2 — MUST run before gtag.js loads.
-          Using beforeInteractive so it executes before any hydration.
+          Google Consent Mode v2 — executes before any tracking scripts
         */}
         <Script
           id="google-consent-mode"
@@ -171,26 +156,43 @@ export default function RootLayout({
           }}
         />
         {/*
-          GA4 — lazyOnload defers loading until page is fully idle.
-          This prevents GA from competing with LCP and FID on mobile.
+          GA4 deferred loader: Loads on first user interaction or idle delay.
+          Zero render-blocking, zero impact on mobile LCP/FCP, full GA4 tracking intact.
         */}
         <Script
-          strategy="lazyOnload"
-          src="https://www.googletagmanager.com/gtag/js?id=G-HT87NWEHNT"
-        />
-        <Script
-          id="ga4-config"
+          id="ga4-deferred"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-HT87NWEHNT', {
-                page_path: window.location.pathname,
-                anonymize_ip: true,
-                cookie_flags: 'SameSite=None;Secure'
+              function loadGA4() {
+                if (window.__ga4Init) return;
+                window.__ga4Init = true;
+                var script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HT87NWEHNT';
+                script.async = true;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-HT87NWEHNT', {
+                  page_path: window.location.pathname,
+                  anonymize_ip: true,
+                  cookie_flags: 'SameSite=None;Secure'
+                });
+              }
+
+              var interactionEvents = ['scroll', 'touchstart', 'mousemove', 'click', 'keydown'];
+              function onInteraction() {
+                loadGA4();
+                interactionEvents.forEach(function(ev) {
+                  window.removeEventListener(ev, onInteraction);
+                });
+              }
+              interactionEvents.forEach(function(ev) {
+                window.addEventListener(ev, onInteraction, { passive: true, once: true });
               });
+              setTimeout(loadGA4, 3500);
             `,
           }}
         />

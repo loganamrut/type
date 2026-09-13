@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="py-20 text-center max-w-md mx-auto space-y-4">
-      <span className="font-mono text-xs text-zinc-400 uppercase tracking-widest block">
+      <span className="font-mono text-xs text-zinc-600 uppercase tracking-widest block">
         404 / Not Found
       </span>
 

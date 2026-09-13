@@ -181,21 +181,21 @@ export default function HomePage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
               <div className="p-3 bg-white rounded border border-zinc-200 space-y-1">
-                <span className="text-[10px] font-mono font-bold text-zinc-400">01 / State</span>
+                <span className="text-[10px] font-mono font-bold text-zinc-600">01 / State</span>
                 <h4 className="font-semibold text-xs text-zinc-950">DOM Text Sync</h4>
                 <p className="text-[11px] text-zinc-500 leading-relaxed">
                   Client-side reactive state binds your custom copy across all preview cards with zero server delay.
                 </p>
               </div>
               <div className="p-3 bg-white rounded border border-zinc-200 space-y-1">
-                <span className="text-[10px] font-mono font-bold text-zinc-400">02 / Network</span>
+                <span className="text-[10px] font-mono font-bold text-zinc-600">02 / Network</span>
                 <h4 className="font-semibold text-xs text-zinc-950">Zero-CLS Lazy Loading</h4>
                 <p className="text-[11px] text-zinc-500 leading-relaxed">
                   Web fonts (WOFF2) load on-demand when specimen cards enter your viewport, preserving bandwidth.
                 </p>
               </div>
               <div className="p-3 bg-white rounded border border-zinc-200 space-y-1">
-                <span className="text-[10px] font-mono font-bold text-zinc-400">03 / Layout</span>
+                <span className="text-[10px] font-mono font-bold text-zinc-600">03 / Layout</span>
                 <h4 className="font-semibold text-xs text-zinc-950">CSS Variables</h4>
                 <p className="text-[11px] text-zinc-500 leading-relaxed">
                   Optical properties update instantly via CSS rules processed directly by the browser layout engine.
@@ -263,7 +263,7 @@ export default function HomePage() {
 
           {/* Section 4: Internal Links Grid */}
           <div className="pt-4 space-y-3">
-            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400">
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-600">
               Specialized Typography Studios
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
@@ -368,7 +368,7 @@ export default function HomePage() {
                 <span className="font-semibold text-zinc-950 group-hover:underline underline-offset-2 block leading-tight">
                   {item.label}
                 </span>
-                <span className="text-zinc-400 text-[11px] leading-tight block">{item.desc}</span>
+                <span className="text-zinc-600 text-[11px] leading-tight block">{item.desc}</span>
               </Link>
             ))}
           </div>

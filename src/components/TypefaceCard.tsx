@@ -42,7 +42,7 @@ export function TypefaceCard({
           }
         });
       },
-      { rootMargin: '300px' }
+      { rootMargin: '80px' }
     );
 
     if (cardRef.current) {
@@ -110,15 +110,15 @@ letter-spacing: ${settings.letterSpacing}em;`;
               {typeface.name}
             </h3>
             {typeface.isVariable && (
-              <span className="text-[10px] font-mono px-1 py-0.2 rounded bg-zinc-100 text-zinc-600 shrink-0">
+              <span className="text-[10px] font-mono px-1 py-0.2 rounded bg-zinc-100 text-zinc-700 shrink-0">
                 var
               </span>
             )}
-            <span className="text-[10px] font-mono px-1 py-0.2 rounded bg-zinc-100 text-zinc-500 capitalize shrink-0">
+            <span className="text-[10px] font-mono px-1 py-0.2 rounded bg-zinc-100 text-zinc-700 capitalize shrink-0">
               {typeface.category}
             </span>
           </div>
-          <p className="text-[11px] text-zinc-400 truncate">
+          <p className="text-[11px] text-zinc-600 truncate">
             {typeface.author} · {typeface.weights.length} weights
           </p>
         </div>
@@ -143,7 +143,7 @@ letter-spacing: ${settings.letterSpacing}em;`;
           <button
             onClick={() => onToggleFavorite(typeface.id)}
             className={`w-7 h-7 flex items-center justify-center rounded border border-transparent transition-colors ${
-              isFavorite ? 'text-rose-500 fill-rose-500' : 'text-zinc-400 hover:text-zinc-950 hover:bg-zinc-100'
+              isFavorite ? 'text-rose-500 fill-rose-500' : 'text-zinc-500 hover:text-zinc-950 hover:bg-zinc-100'
             }`}
             title="Favorite"
             aria-label="Favorite"
@@ -155,7 +155,7 @@ letter-spacing: ${settings.letterSpacing}em;`;
           <button
             onClick={() => onToggleCompare(typeface.id)}
             className={`w-7 h-7 flex items-center justify-center rounded border text-xs transition-colors ${
-              isInCompare ? 'bg-zinc-950 text-white border-zinc-950' : 'border-zinc-200 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-50'
+              isInCompare ? 'bg-zinc-950 text-white border-zinc-950' : 'border-zinc-200 text-zinc-600 hover:text-zinc-950 hover:bg-zinc-50'
             }`}
             title="Compare side-by-side"
             aria-label="Compare"
@@ -166,7 +166,7 @@ letter-spacing: ${settings.letterSpacing}em;`;
           {/* Get CSS Modal */}
           <button
             onClick={() => onOpenCSS(typeface)}
-            className="w-7 h-7 flex items-center justify-center rounded border border-zinc-200 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-50 transition-colors"
+            className="w-7 h-7 flex items-center justify-center rounded border border-zinc-200 text-zinc-600 hover:text-zinc-950 hover:bg-zinc-50 transition-colors"
             title="Get CSS & embed code"
             aria-label="Get CSS"
           >
@@ -194,7 +194,7 @@ letter-spacing: ${settings.letterSpacing}em;`;
       </div>
 
       {/* Footer toolbar: Copy CSS button, Copy text, and link */}
-      <div className="pt-3 mt-3 border-t border-zinc-100 flex items-center justify-between text-xs text-zinc-500">
+      <div className="pt-3 mt-3 border-t border-zinc-100 flex items-center justify-between text-xs text-zinc-600">
         <div className="flex items-center gap-2">
           {/* Copy CSS Button */}
           <button
@@ -212,13 +212,13 @@ letter-spacing: ${settings.letterSpacing}em;`;
 
           <Link
             href={`/font-tester?font=${typeface.id}`}
-            className="text-[11px] text-zinc-400 hover:text-zinc-950 transition-colors"
+            className="text-[11px] text-zinc-600 hover:text-zinc-950 transition-colors"
           >
             Specimen &rarr;
           </Link>
         </div>
 
-        <span className="font-mono text-[11px] text-zinc-400">
+        <span className="font-mono text-[11px] text-zinc-600">
           {closestWeight}w
         </span>
       </div>

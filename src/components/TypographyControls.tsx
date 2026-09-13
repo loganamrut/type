@@ -49,7 +49,7 @@ export function TypographyControls({
           <span className="text-xs font-semibold uppercase tracking-wider text-zinc-950">
             Typography Controls
           </span>
-          <span className="text-[11px] font-mono text-zinc-400 hidden sm:inline">
+          <span className="text-[11px] font-mono text-zinc-600 hidden sm:inline">
             ({settings.fontSize}px · {settings.fontWeight}w · {settings.lineHeight.toFixed(2)}lh)
           </span>
         </div>
@@ -58,7 +58,7 @@ export function TypographyControls({
           {isExpanded && (
             <button
               onClick={onReset}
-              className="text-xs text-zinc-400 hover:text-zinc-950 flex items-center gap-1 transition-colors px-2 py-1"
+              className="text-xs text-zinc-600 hover:text-zinc-950 flex items-center gap-1 transition-colors px-2 py-1"
               title="Reset typography settings"
             >
               <RotateCcw className="w-3 h-3" />
@@ -135,7 +135,7 @@ export function TypographyControls({
             onChange={(e) => onChange({ fontWeight: Number(e.target.value) })}
             className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-zinc-950"
           />
-          <div className="flex justify-between text-[10px] text-zinc-400 font-mono">
+          <div className="flex justify-between text-[10px] text-zinc-600 font-mono">
             <span>100 Thin</span>
             <span>400 Regular</span>
             <span>900 Black</span>
@@ -145,7 +145,7 @@ export function TypographyControls({
         {/* Line Height */}
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-xs">
-            <label htmlFor="lineheight-slider" className="text-zinc-500 font-medium">Line Height</label>
+            <label htmlFor="lineheight-slider" className="text-zinc-600 font-medium">Line Height</label>
             <span className="font-mono text-zinc-950">{settings.lineHeight.toFixed(2)}</span>
           </div>
           <input
@@ -158,7 +158,7 @@ export function TypographyControls({
             onChange={(e) => onChange({ lineHeight: Number(e.target.value) })}
             className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-zinc-950"
           />
-          <div className="flex justify-between text-[10px] text-zinc-400 font-mono">
+          <div className="flex justify-between text-[10px] text-zinc-600 font-mono">
             <span>1.0 Tight</span>
             <span>1.5 Standard</span>
             <span>2.4 Loose</span>
@@ -168,7 +168,7 @@ export function TypographyControls({
         {/* Letter Spacing */}
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-xs">
-            <label htmlFor="letterspacing-slider" className="text-zinc-500 font-medium">Tracking</label>
+            <label htmlFor="letterspacing-slider" className="text-zinc-600 font-medium">Tracking</label>
             <span className="font-mono text-zinc-950">
               {settings.letterSpacing > 0 ? `+${settings.letterSpacing.toFixed(2)}` : settings.letterSpacing.toFixed(2)}em
             </span>
@@ -183,7 +183,7 @@ export function TypographyControls({
             onChange={(e) => onChange({ letterSpacing: Number(e.target.value) })}
             className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-zinc-950"
           />
-          <div className="flex justify-between text-[10px] text-zinc-400 font-mono">
+          <div className="flex justify-between text-[10px] text-zinc-600 font-mono">
             <span>-0.05</span>
             <span>0.00</span>
             <span>+0.30</span>
@@ -195,7 +195,7 @@ export function TypographyControls({
       <div className="pt-3 border-t border-zinc-100 flex flex-wrap items-center justify-between gap-3 text-xs">
         {/* Alignment */}
         <div className="flex items-center gap-1">
-          <span className="text-zinc-400 mr-1 hidden sm:inline text-[11px] uppercase">Align:</span>
+          <span className="text-zinc-600 mr-1 hidden sm:inline text-[11px] uppercase">Align:</span>
           <button
             onClick={() => onChange({ textAlign: 'left' })}
             className={`w-8 h-8 flex items-center justify-center rounded transition-colors active:scale-95 ${
@@ -236,7 +236,7 @@ export function TypographyControls({
 
         {/* Text Transform */}
         <div className="flex items-center gap-1">
-          <span className="text-zinc-400 mr-1 hidden sm:inline text-[11px] uppercase">Case:</span>
+          <span className="text-zinc-600 mr-1 hidden sm:inline text-[11px] uppercase">Case:</span>
           <button
             onClick={() => onChange({ textTransform: 'none' })}
             className={`h-8 px-2.5 rounded text-xs transition-colors flex items-center justify-center active:scale-95 ${
@@ -265,7 +265,7 @@ export function TypographyControls({
 
         {/* Canvas Background (All White/Light Minimal Tones) */}
         <div className="flex items-center gap-1.5">
-          <span className="text-zinc-400 mr-1 hidden sm:inline text-[11px] uppercase">Canvas:</span>
+          <span className="text-zinc-600 mr-1 hidden sm:inline text-[11px] uppercase">Canvas:</span>
           <button
             onClick={() => onChange({ previewTheme: 'light' })}
             className={`w-6 h-6 rounded-full border border-zinc-300 transition-all active:scale-95 ${
@@ -302,7 +302,7 @@ export function TypographyControls({
 
         {/* Viewport Width */}
         <div className="flex items-center gap-1">
-          <span className="text-zinc-400 mr-1 hidden sm:inline text-[11px] uppercase">Width:</span>
+          <span className="text-zinc-600 mr-1 hidden sm:inline text-[11px] uppercase">Width:</span>
           <button
             onClick={() => onChange({ previewWidth: 'full' })}
             className={`w-8 h-8 flex items-center justify-center rounded transition-colors active:scale-95 ${

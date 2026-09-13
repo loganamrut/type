@@ -152,11 +152,11 @@ export function TypeScaleTool({ isStandalonePage = false }: TypeScaleToolProps) 
                 <span className="font-semibold text-zinc-950">
                   {step.name}
                 </span>
-                <code className="text-[10px] font-mono text-zinc-400">
+                <code className="text-[10px] font-mono text-zinc-600">
                   .{step.token}
                 </code>
               </div>
-              <div className="text-[11px] font-mono text-zinc-400">
+              <div className="text-[11px] font-mono text-zinc-600">
                 {step.rem}rem · {step.px}px
               </div>
             </div>

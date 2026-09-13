@@ -53,19 +53,23 @@ export function TypefaceFilters({
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
         {/* Search Bar */}
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
+          <label htmlFor="search-typefaces" className="sr-only">Search typefaces</label>
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" />
           <input
+            id="search-typefaces"
+            aria-label="Search typefaces by name, author, or tag"
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search typefaces by name, author, or tag (e.g. Inter, Editorial, Code)..."
-            className="w-full pl-9 pr-8 py-2 bg-white border border-zinc-200 rounded-md text-sm placeholder:text-zinc-400 text-zinc-950 focus:outline-none focus:border-zinc-950 transition-colors"
+            className="w-full pl-9 pr-8 py-2 bg-white border border-zinc-200 rounded-md text-sm placeholder:text-zinc-500 text-zinc-950 focus:outline-none focus:border-zinc-950 transition-colors"
           />
           {searchQuery && (
             <button
               onClick={() => onSearchChange('')}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 text-zinc-400 hover:text-zinc-950"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 text-zinc-500 hover:text-zinc-950"
               title="Clear search"
+              aria-label="Clear search"
             >
               <X className="w-3.5 h-3.5" />
             </button>
@@ -129,15 +133,15 @@ export function TypefaceFilters({
       </div>
 
       {/* Use Case Bar & Result Counts */}
-      <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-zinc-100 text-xs text-zinc-500">
+      <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-zinc-100 text-xs text-zinc-600">
         <div className="scroll-touch-x flex items-center gap-1 py-1 max-w-full">
-          <span className="text-[11px] font-mono text-zinc-400 uppercase mr-1 shrink-0">For:</span>
+          <span className="text-[11px] font-mono text-zinc-600 uppercase mr-1 shrink-0">For:</span>
           <button
             onClick={() => onUseCaseChange('all')}
             className={`min-h-[28px] px-2.5 py-0.5 rounded text-[11px] transition-colors whitespace-nowrap active:scale-95 ${
               selectedUseCase === 'all'
                 ? 'bg-zinc-950 text-white font-medium'
-                : 'text-zinc-500 hover:text-zinc-950'
+                : 'text-zinc-600 hover:text-zinc-950'
             }`}
           >
             All
@@ -149,7 +153,7 @@ export function TypefaceFilters({
               className={`min-h-[28px] px-2.5 py-0.5 rounded text-[11px] transition-colors whitespace-nowrap active:scale-95 ${
                 selectedUseCase === uc.id
                   ? 'bg-zinc-950 text-white font-medium'
-                : 'text-zinc-500 hover:text-zinc-950'
+                : 'text-zinc-600 hover:text-zinc-950'
               }`}
             >
               {uc.label}
@@ -157,7 +161,7 @@ export function TypefaceFilters({
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-zinc-400 ml-auto">
+        <div className="flex items-center gap-2 text-zinc-600 ml-auto">
           <span>
             <strong className="text-zinc-950 font-normal">{filteredCount}</strong> of {totalCount} typefaces
           </span>

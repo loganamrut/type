@@ -122,7 +122,7 @@ export default function FontPairingPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
           <div className="p-4 bg-white border border-zinc-200 rounded space-y-1.5">
-            <span className="font-mono text-zinc-400 uppercase text-[10px]">Rule 1</span>
+            <span className="font-mono text-zinc-600 uppercase text-[10px]">Rule 1</span>
             <h3 className="font-bold text-zinc-950">Establish Contrast</h3>
             <p className="text-zinc-600 leading-relaxed">
               Never pair two fonts that look almost identical. Pair distinct classifications: Serif with Sans, or Display with Neutral.
@@ -130,7 +130,7 @@ export default function FontPairingPage() {
           </div>
 
           <div className="p-4 bg-white border border-zinc-200 rounded space-y-1.5">
-            <span className="font-mono text-zinc-400 uppercase text-[10px]">Rule 2</span>
+            <span className="font-mono text-zinc-600 uppercase text-[10px]">Rule 2</span>
             <h3 className="font-bold text-zinc-950">Harmonize X-Height</h3>
             <p className="text-zinc-600 leading-relaxed">
               Matching optical x-heights prevents jarring jumps in visual density when moving between headings and paragraphs.
@@ -138,7 +138,7 @@ export default function FontPairingPage() {
           </div>
 
           <div className="p-4 bg-white border border-zinc-200 rounded space-y-1.5">
-            <span className="font-mono text-zinc-400 uppercase text-[10px]">Rule 3</span>
+            <span className="font-mono text-zinc-600 uppercase text-[10px]">Rule 3</span>
             <h3 className="font-bold text-zinc-950">Assign Visual Roles</h3>
             <p className="text-zinc-600 leading-relaxed">
               One font sets the emotional tone in headings; the other provides effortless scanning across body text.
