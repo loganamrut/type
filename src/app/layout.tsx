@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import '@/styles/globals.css';
 import { Header } from '@/components/Header';
@@ -14,14 +13,6 @@ export const viewport: Viewport = {
   themeColor: '#ffffff',
   colorScheme: 'light',
 };
-
-// Next.js font optimization: Only Inter is needed for global UI
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-  preload: true,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://typefacegen.com'),
@@ -121,7 +112,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} bg-white text-zinc-950`}
+      className="bg-white text-zinc-950"
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

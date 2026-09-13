@@ -1,4 +1,5 @@
 const { execSync } = require('child_process');
+const path = require('path');
 
 function run(cmd) {
   console.log(`> ${cmd}`);
@@ -9,10 +10,13 @@ try {
   console.log('--- 1. BUILDING NEXT.JS STATIC EXPORT ---');
   run('npm run build');
 
+  console.log('\n--- 1.5. INLINING CRITICAL CSS FOR 0ms RENDER-BLOCKING ---');
+  run('node scripts/optimize-html.js');
+
   console.log('\n--- 2. COMMITTING AND PUSHING MAIN BRANCH ---');
   run('git add -A');
   try {
-    run('git commit -m "chore: update build and static assets"');
+    run('git commit -m "perf: eliminate render-blocking CSS, remove UI web fonts, and code-split bundles"');
   } catch (e) {
     console.log('No new changes to commit on main.');
   }

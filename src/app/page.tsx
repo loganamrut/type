@@ -1,14 +1,33 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { ArrowRight } from 'lucide-react';
 import { TypefaceGenerator } from '@/components/TypefaceGenerator';
-import { TypefacePairing } from '@/components/TypefacePairing';
-import { TypefaceComparison } from '@/components/TypefaceComparison';
-import { TypeScaleTool } from '@/components/TypeScaleTool';
 import { FAQSection } from '@/components/FAQSection';
 import { FAQS_DATA } from '@/lib/faqs-data';
 import { JsonLd } from '@/components/JsonLd';
+
+const TypefacePairing = dynamic(
+  () => import('@/components/TypefacePairing').then((mod) => mod.TypefacePairing),
+  {
+    loading: () => <div className="h-64 rounded bg-zinc-50 border border-zinc-100 animate-pulse" />,
+  }
+);
+
+const TypefaceComparison = dynamic(
+  () => import('@/components/TypefaceComparison').then((mod) => mod.TypefaceComparison),
+  {
+    loading: () => <div className="h-64 rounded bg-zinc-50 border border-zinc-100 animate-pulse" />,
+  }
+);
+
+const TypeScaleTool = dynamic(
+  () => import('@/components/TypeScaleTool').then((mod) => mod.TypeScaleTool),
+  {
+    loading: () => <div className="h-64 rounded bg-zinc-50 border border-zinc-100 animate-pulse" />,
+  }
+);
 
 export const metadata: Metadata = {
   title: 'Typeface Generator - Preview, Compare & Pair Fonts Online',

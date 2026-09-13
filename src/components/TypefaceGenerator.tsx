@@ -2,15 +2,24 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { SlidersHorizontal, Shuffle, Grid, List } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import { Typeface, TypefaceCategory, TypefaceUseCase, TypographySettings } from '@/lib/types';
 import { TYPEFACES } from '@/lib/fonts-data';
 import { TextEditor } from './TextEditor';
 import { TypographyControls } from './TypographyControls';
 import { TypefaceFilters } from './TypefaceFilters';
 import { TypefaceCard } from './TypefaceCard';
-import { TypefaceComparison } from './TypefaceComparison';
-import { CSSExportModal } from './CSSExportModal';
 import { safeStorage, STORAGE_KEYS } from '@/lib/storage';
+
+const TypefaceComparison = dynamic(
+  () => import('./TypefaceComparison').then((mod) => mod.TypefaceComparison),
+  { ssr: false }
+);
+
+const CSSExportModal = dynamic(
+  () => import('./CSSExportModal').then((mod) => mod.CSSExportModal),
+  { ssr: false }
+);
 
 interface TypefaceGeneratorProps {
   initialCategory?: TypefaceCategory;
