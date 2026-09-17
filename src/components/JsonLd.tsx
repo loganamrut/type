@@ -3,6 +3,16 @@ import React from 'react';
 export interface HowToStep {
   name: string;
   text: string;
+  image?: string;
+}
+
+export interface InfographicData {
+  url: string;
+  name: string;
+  caption: string;
+  description: string;
+  width: number;
+  height: number;
 }
 
 export interface ItemListEntry {
@@ -22,9 +32,11 @@ export interface JsonLdProps {
   toolName?: string;
   toolDescription?: string;
   features?: string[];
+  infographic?: InfographicData;
   howTo?: {
     name: string;
     description: string;
+    image?: string;
     steps: HowToStep[];
   };
   itemList?: {
@@ -44,6 +56,7 @@ export function JsonLd({
   toolName,
   toolDescription,
   features,
+  infographic,
   howTo,
   itemList,
   url = 'https://typefacegen.com/',
@@ -121,6 +134,33 @@ export function JsonLd({
   if (breadcrumbs && breadcrumbs.length > 0) {
     webPageSchema.breadcrumb = { '@id': `${canonicalUrl}#breadcrumb` };
   }
+
+  // 3.5. Infographic ImageObject Schema (Google Image Search & Rich Snippets)
+  if (infographic) {
+    const infographicSchema = {
+      '@type': 'ImageObject',
+      '@id': `${canonicalUrl}#infographic`,
+      url: infographic.url,
+      contentUrl: infographic.url,
+      name: infographic.name,
+      caption: infographic.caption,
+      description: infographic.description,
+      width: String(infographic.width),
+      height: String(infographic.height),
+      encodingFormat: infographic.url.endsWith('.webp') ? 'image/webp' : 'image/png',
+      representativeOfPage: true,
+      author: { '@id': 'https://typefacegen.com/#organization' },
+      license: 'https://typefacegen.com/terms',
+      acquireLicensePage: 'https://typefacegen.com/about',
+    };
+    graph.push(infographicSchema);
+
+    webPageSchema.image = [
+      'https://typefacegen.com/og-image.png',
+      infographic.url,
+    ];
+  }
+
   graph.push(webPageSchema);
 
   // 4. WebApplication Schema (Google Rich Results for Web Tools)
@@ -200,19 +240,30 @@ export function JsonLd({
 
   // 7. HowTo Schema (Google How-To Rich Snippets for procedural guides)
   if (howTo && howTo.steps && howTo.steps.length > 0) {
-    const howToSchema = {
+    const howToImage = howTo.image || infographic?.url;
+    const howToSchema: any = {
       '@type': 'HowTo',
       '@id': `${canonicalUrl}#howto`,
       name: howTo.name,
       description: howTo.description,
+      totalTime: 'PT2M',
       step: howTo.steps.map((s, idx) => ({
         '@type': 'HowToStep',
         position: idx + 1,
         name: s.name,
         text: s.text,
         url: `${canonicalUrl}#step-${idx + 1}`,
+        image: s.image || (howToImage ? `${howToImage}#step-${idx + 1}` : undefined),
       })),
     };
+    if (howToImage) {
+      howToSchema.image = {
+        '@type': 'ImageObject',
+        url: howToImage,
+        contentUrl: howToImage,
+        caption: howTo.name,
+      };
+    }
     graph.push(howToSchema);
   }
 

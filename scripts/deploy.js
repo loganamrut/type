@@ -7,7 +7,10 @@ function run(cmd) {
 }
 
 try {
-  console.log('--- 1. BUILDING NEXT.JS STATIC EXPORT ---');
+  console.log('--- 0. GENERATING VECTOR & COMPRESSED INFOGRAPHIC ASSETS ---');
+  run('node scripts/generate-infographic.js');
+
+  console.log('\n--- 1. BUILDING NEXT.JS STATIC EXPORT ---');
   run('npm run build');
 
   console.log('\n--- 1.5. INLINING CRITICAL CSS FOR 0ms RENDER-BLOCKING ---');
@@ -16,7 +19,7 @@ try {
   console.log('\n--- 2. COMMITTING AND PUSHING MAIN BRANCH ---');
   run('git add -A');
   try {
-    run('git commit -m "perf: eliminate render-blocking CSS, remove UI web fonts, and code-split bundles"');
+    run('git commit -m "feat(seo): add How It Works wide infographic, Google Image Sitemap, ImageObject schema, and on-page jump navigation"');
   } catch (e) {
     console.log('No new changes to commit on main.');
   }

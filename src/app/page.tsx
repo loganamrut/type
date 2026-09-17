@@ -51,6 +51,9 @@ export const metadata: Metadata = {
     'font pairing generator',
     'typeface pairing',
     'font combination generator',
+    'how typeface generator works',
+    'how it works typeface generator',
+    'online font generator workflow',
   ],
   alternates: {
     canonical: 'https://typefacegen.com/',
@@ -65,6 +68,12 @@ export const metadata: Metadata = {
       'Use our free typeface generator to preview, compare, and pair typefaces online. Test custom text with 200+ popular fonts, modular scales, styles, and copy CSS instantly.',
     images: [
       {
+        url: '/images/how-typeface-generator-works.png',
+        width: 1200,
+        height: 675,
+        alt: 'How Typeface Generator Works - Step-by-Step Typography Workflow',
+      },
+      {
         url: '/og-image.png',
         width: 1200,
         height: 630,
@@ -77,7 +86,7 @@ export const metadata: Metadata = {
     title: 'Typeface Generator - Preview, Compare & Pair Fonts Online',
     description:
       'Use our free typeface generator to preview, compare, and pair typefaces online. Test custom text with 200+ popular fonts, modular scales, styles, and copy CSS instantly.',
-    images: ['/og-image.png'],
+    images: ['/images/how-typeface-generator-works.png'],
   },
 };
 
@@ -94,14 +103,23 @@ export default function HomePage() {
         toolDescription="Free online typeface generator to preview, compare, and pair 200+ Google & open-source typefaces with live custom text, modular scales, and instant CSS export."
         faqs={FAQS_DATA}
         breadcrumbs={[{ name: 'Typeface Generator', item: 'https://typefacegen.com/' }]}
+        infographic={{
+          url: 'https://typefacegen.com/images/how-typeface-generator-works.png',
+          name: 'How the Online Typeface Generator Works Infographic',
+          caption: 'How Typeface Generator Works - 4 Step Workflow for Testing, Pairing, and Exporting Web Fonts Online',
+          description: 'Visual infographic diagram illustrating the 4-step workflow to preview live custom copy, filter typefaces, customize typographic metrics, and export production CSS.',
+          width: 1200,
+          height: 675,
+        }}
         howTo={{
-          name: 'How to Preview and Test Typefaces Online with TypefaceGen',
-          description: 'A 4-step workflow for previewing custom text across curated open-source typefaces and generating production CSS.',
+          name: 'How to Preview, Test, and Export Typefaces Online with TypefaceGen',
+          description: 'A 4-step workflow for previewing custom text across curated open-source typefaces, adjusting typography metrics, and generating production CSS.',
+          image: 'https://typefacegen.com/images/how-typeface-generator-works.png',
           steps: [
-            { name: 'Enter Custom Copy', text: 'Type or paste your headline, tagline, or sample paragraph into the live reactive text editor.' },
-            { name: 'Filter & Search', text: 'Filter by category (Serif, Sans-Serif, Display, Monospace, Script) or search by font name.' },
-            { name: 'Adjust Typography Metrics', text: 'Click [Expand] to fine-tune font size, weight, line-height, letter spacing, and canvas background.' },
-            { name: 'Copy & Export Code', text: 'Click [Copy] for styled Unicode or [CSS] to export clean @import rules and Tailwind classes.' },
+            { name: 'Enter Real-Time Custom Copy', text: 'Type or paste your headline, brand tagline, or sample paragraph into the live reactive text input bar. All 200+ typeface specimens update instantaneously with zero server lag.' },
+            { name: 'Filter & Compare Typefaces', text: 'Filter by category (Serif, Sans-Serif, Display, Monospace, Script) or search by font name. Compare specimens side-by-side to assess contrast and legibility.' },
+            { name: 'Fine-Tune Typography Metrics', text: 'Click [Expand] on any specimen card to adjust font-size (12px–96px), variable font weight (100–900), line-height, letter-spacing, and background contrast.' },
+            { name: 'Export Production CSS & Unicode', text: 'Click [Copy] for styled Unicode text or [CSS] to export clean production @import font-face declarations and Tailwind classes.' },
           ],
         }}
         itemList={{
@@ -119,25 +137,142 @@ export default function HomePage() {
 
       <div className="space-y-12 sm:space-y-16">
         {/* 1. PRIMARY CORE PRODUCT (ABOVE THE FOLD) */}
-        <TypefaceGenerator />
+        <div id="generator">
+          <TypefaceGenerator />
+        </div>
 
-        {/* 2. TYPEFACE PAIRING GENERATOR SECTION — below fold: content-visibility deferred */}
-        <section className="pt-6 border-t border-zinc-200 cv-auto">
+        {/* ON-PAGE JUMP NAVIGATION FOR ACCESSIBILITY & GOOGLE SITELINKS */}
+        <nav aria-label="Page Sections" className="scroll-touch-x flex items-center gap-2 py-2 text-xs border-y border-zinc-100 bg-zinc-50/70 -mx-4 px-4 sm:mx-0 sm:px-3 sm:rounded-lg">
+          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-500 shrink-0">
+            Quick Nav:
+          </span>
+          <a href="#generator" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
+            Generator
+          </a>
+          <a href="#how-it-works" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors font-medium">
+            How It Works
+          </a>
+          <a href="#pairing" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
+            Pairing Tool
+          </a>
+          <a href="#comparison" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
+            Comparison
+          </a>
+          <a href="#scale" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
+            Type Scale
+          </a>
+          <a href="#typography-guide" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
+            Typography Guide
+          </a>
+          <a href="#all-generators" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
+            All Generators
+          </a>
+          <a href="#faqs" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
+            FAQ
+          </a>
+        </nav>
+
+        {/* 2. HOW IT WORKS: WORKFLOW INFOGRAPHIC & STEP-BY-STEP GUIDE */}
+        <section id="how-it-works" className="pt-6 border-t border-zinc-200 space-y-6 cv-auto">
+          <div className="space-y-1.5 max-w-3xl">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-800 border border-zinc-200">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Visual Workflow Guide
+            </div>
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950">
+              How the Online Typeface Generator Works
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+              Follow this 4-step workflow to preview live custom copy across 200+ open-source typefaces,
+              adjust typography metrics, and export clean production CSS rules in seconds.
+            </p>
+          </div>
+
+          {/* Wide Infographic Graphic with Semantic HTML5 */}
+          <figure className="overflow-hidden rounded-xl border border-zinc-200 bg-white p-2 sm:p-4 shadow-sm">
+            <picture>
+              <source srcSet="/images/how-typeface-generator-works.webp" type="image/webp" />
+              <source srcSet="/images/how-typeface-generator-works.png" type="image/png" />
+              <img
+                src="/images/how-typeface-generator-works.png"
+                alt="How Typeface Generator Works - Step-by-step workflow to preview, compare, customize typography metrics, and export web fonts online"
+                width={1200}
+                height={675}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto rounded-lg"
+              />
+            </picture>
+            <figcaption className="mt-3 text-center text-xs text-zinc-500 font-medium">
+              Figure 1: Visual breakdown of the TypefaceGen workflow—live text synchronization, typeface filtering, typographic metric tuning, and CSS export.
+            </figcaption>
+          </figure>
+
+          {/* 4 In-Depth Step Breakdown Cards for Search Crawlers & Accessibility */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-1">
+            <div id="step-1" className="bg-white border border-zinc-200 p-4 rounded-lg space-y-2 hover:border-zinc-400 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="w-6 h-6 rounded-full bg-zinc-950 text-white text-xs font-bold flex items-center justify-center font-mono">1</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-semibold">Reactive State</span>
+              </div>
+              <h3 className="text-sm font-bold text-zinc-950">1. Enter Custom Copy</h3>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                Type or paste your headline, tagline, or sample paragraph in the live reactive input box. Every glyph synchronizes across all 200+ typefaces simultaneously with zero server latency.
+              </p>
+            </div>
+
+            <div id="step-2" className="bg-white border border-zinc-200 p-4 rounded-lg space-y-2 hover:border-zinc-400 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="w-6 h-6 rounded-full bg-zinc-950 text-white text-xs font-bold flex items-center justify-center font-mono">2</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold">200+ Web Fonts</span>
+              </div>
+              <h3 className="text-sm font-bold text-zinc-950">2. Filter &amp; Compare</h3>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                Filter fonts by category—Serif, Sans-Serif, Display, Monospace, or Script. Compare x-heights, stroke modulation, and legibility side-by-side to choose the best typeface for your project.
+              </p>
+            </div>
+
+            <div id="step-3" className="bg-white border border-zinc-200 p-4 rounded-lg space-y-2 hover:border-zinc-400 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="w-6 h-6 rounded-full bg-zinc-950 text-white text-xs font-bold flex items-center justify-center font-mono">3</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold">Optical Controls</span>
+              </div>
+              <h3 className="text-sm font-bold text-zinc-950">3. Adjust Metrics</h3>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                Click Expand on any card to interactively fine-tune font size (12px–96px), variable font weight (100–900), line-height, and letter-spacing with instant browser layout engine rendering.
+              </p>
+            </div>
+
+            <div id="step-4" className="bg-white border border-zinc-200 p-4 rounded-lg space-y-2 hover:border-zinc-400 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="w-6 h-6 rounded-full bg-zinc-950 text-white text-xs font-bold flex items-center justify-center font-mono">4</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-blue-600 font-semibold">Code Export</span>
+              </div>
+              <h3 className="text-sm font-bold text-zinc-950">4. Export CSS &amp; Unicode</h3>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                Copy clean production CSS rules with <code>@import</code> font-face links and Tailwind classes, or copy styled Unicode text to paste directly into Instagram, Twitter/X, and design mockups.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. TYPEFACE PAIRING GENERATOR SECTION — below fold: content-visibility deferred */}
+        <section id="pairing" className="pt-6 border-t border-zinc-200 cv-auto">
           <TypefacePairing />
         </section>
 
-        {/* 3. SIDE-BY-SIDE TYPEFACE INSPECTOR / TESTER — below fold */}
-        <section className="pt-6 border-t border-zinc-200 cv-auto">
+        {/* 4. SIDE-BY-SIDE TYPEFACE INSPECTOR / TESTER — below fold */}
+        <section id="comparison" className="pt-6 border-t border-zinc-200 cv-auto">
           <TypefaceComparison initialFontIds={['inter', 'playfair-display', 'newsreader']} />
         </section>
 
-        {/* 4. MODULAR TYPE SCALE CALCULATOR — below fold */}
-        <section className="pt-6 border-t border-zinc-200 cv-auto">
+        {/* 5. MODULAR TYPE SCALE CALCULATOR — below fold */}
+        <section id="scale" className="pt-6 border-t border-zinc-200 cv-auto">
           <TypeScaleTool />
         </section>
 
-        {/* 5. EDITORIAL & EDUCATIONAL TYPOGRAPHY AUTHORITY — below fold */}
-        <section className="pt-8 border-t border-zinc-200 space-y-12 cv-auto">
+        {/* 6. EDITORIAL & EDUCATIONAL TYPOGRAPHY AUTHORITY — below fold */}
+        <section id="typography-guide" className="pt-8 border-t border-zinc-200 space-y-12 cv-auto">
           {/* Header */}
           <div className="space-y-1.5 max-w-2xl">
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950">
@@ -346,8 +481,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 6. ALL GENERATORS HUB — Internal linking + SEO topical authority */}
-        <section className="space-y-6 border-t border-zinc-200 pt-10">
+        {/* 7. ALL GENERATORS HUB — Internal linking + SEO topical authority */}
+        <section id="all-generators" className="space-y-6 border-t border-zinc-200 pt-10">
           <div className="space-y-1">
             <h2 className="text-xl font-extrabold tracking-tight text-zinc-950">All Font Generators</h2>
             <p className="text-xs text-zinc-500 leading-relaxed max-w-2xl">
@@ -393,8 +528,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 7. AUTHORITATIVE FAQ SECTION */}
-        <FAQSection />
+        {/* 8. AUTHORITATIVE FAQ SECTION */}
+        <section id="faqs" className="border-t border-zinc-200 pt-8">
+          <FAQSection />
+        </section>
       </div>
     </>
   );

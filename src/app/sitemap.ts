@@ -48,5 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: currentDate,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
+    images:
+      route.path === ''
+        ? [
+            `${baseUrl}/images/how-typeface-generator-works.png`,
+            `${baseUrl}/og-image.png`,
+          ]
+        : [`${baseUrl}/og-image.png`],
   }));
 }
