@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://typefacegen.com
+Sitemap: https://typefacegen.com/sitemap.xml
