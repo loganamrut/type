@@ -10,6 +10,9 @@ try {
   console.log('--- 0. GENERATING VECTOR & COMPRESSED INFOGRAPHIC ASSETS ---');
   run('node scripts/generate-infographic.js');
 
+  console.log('\n--- 0.5. GENERATING ANIMATED VIDEO ASSETS (MP4, WEBM, VTT) ---');
+  run('node scripts/generate-video.js');
+
   console.log('\n--- 1. BUILDING NEXT.JS STATIC EXPORT ---');
   run('npm run build');
 
@@ -19,7 +22,7 @@ try {
   console.log('\n--- 2. COMMITTING AND PUSHING MAIN BRANCH ---');
   run('git add -A');
   try {
-    run('git commit -m "feat(seo): add How It Works wide infographic, Google Image Sitemap, ImageObject schema, and on-page jump navigation"');
+    run('git commit -m "feat(video): add How It Works video walkthrough, VideoObject schema with Key Moments, and Google Video Sitemap"');
   } catch (e) {
     console.log('No new changes to commit on main.');
   }

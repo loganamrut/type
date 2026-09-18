@@ -7,6 +7,7 @@ import { TypefaceGenerator } from '@/components/TypefaceGenerator';
 import { FAQSection } from '@/components/FAQSection';
 import { FAQS_DATA } from '@/lib/faqs-data';
 import { JsonLd } from '@/components/JsonLd';
+import { HowItWorksMedia } from '@/components/HowItWorksMedia';
 
 const TypefacePairing = dynamic(
   () => import('@/components/TypefacePairing').then((mod) => mod.TypefacePairing),
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
     'how typeface generator works',
     'how it works typeface generator',
     'online font generator workflow',
+    'how typeface generator works video',
+    'typeface generator video walkthrough',
+    'online typography generator tutorial',
   ],
   alternates: {
     canonical: 'https://typefacegen.com/',
@@ -111,6 +115,25 @@ export default function HomePage() {
           width: 1200,
           height: 675,
         }}
+        video={{
+          name: 'How the Online Typeface Generator Works - Complete Video Walkthrough',
+          description:
+            'A comprehensive step-by-step video walkthrough demonstrating how to preview live custom copy, compare 200+ open-source typefaces, fine-tune typography metrics, and export production CSS code on TypefaceGen.',
+          thumbnailUrl: [
+            'https://typefacegen.com/images/how-typeface-generator-works.png',
+            'https://typefacegen.com/videos/how-typeface-generator-works-poster.jpg',
+          ],
+          uploadDate: '2026-09-18T00:00:00Z',
+          duration: 'PT20S',
+          contentUrl: 'https://typefacegen.com/videos/how-typeface-generator-works.mp4',
+          embedUrl: 'https://typefacegen.com/#how-it-works-video',
+          clips: [
+            { name: 'Step 1: Enter Live Custom Copy', startOffset: 3, endOffset: 7, url: 'https://typefacegen.com/#step-1' },
+            { name: 'Step 2: Filter & Compare Typefaces', startOffset: 7, endOffset: 12, url: 'https://typefacegen.com/#step-2' },
+            { name: 'Step 3: Adjust Typographic Metrics', startOffset: 12, endOffset: 16, url: 'https://typefacegen.com/#step-3' },
+            { name: 'Step 4: Export Production CSS Code', startOffset: 16, endOffset: 20, url: 'https://typefacegen.com/#step-4' },
+          ],
+        }}
         howTo={{
           name: 'How to Preview, Test, and Export Typefaces Online with TypefaceGen',
           description: 'A 4-step workflow for previewing custom text across curated open-source typefaces, adjusting typography metrics, and generating production CSS.',
@@ -150,7 +173,7 @@ export default function HomePage() {
             Generator
           </a>
           <a href="#how-it-works" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors font-medium">
-            How It Works
+            Video &amp; Guide
           </a>
           <a href="#pairing" className="shrink-0 px-2.5 py-1 rounded bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors">
             Pairing Tool
@@ -172,41 +195,24 @@ export default function HomePage() {
           </a>
         </nav>
 
-        {/* 2. HOW IT WORKS: WORKFLOW INFOGRAPHIC & STEP-BY-STEP GUIDE */}
+        {/* 2. HOW IT WORKS: WORKFLOW VIDEO & INFOGRAPHIC STEP-BY-STEP GUIDE */}
         <section id="how-it-works" className="pt-6 border-t border-zinc-200 space-y-6 cv-auto">
           <div className="space-y-1.5 max-w-3xl">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-800 border border-zinc-200">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              Visual Workflow Guide
+              Video Walkthrough &amp; Guide
             </div>
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950">
               How the Online Typeface Generator Works
             </h2>
             <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-              Follow this 4-step workflow to preview live custom copy across 200+ open-source typefaces,
-              adjust typography metrics, and export clean production CSS rules in seconds.
+              Watch our 20-second step-by-step video walkthrough or inspect the workflow diagram below to learn how
+              to preview custom copy across 200+ typefaces, adjust typography metrics, and export production CSS.
             </p>
           </div>
 
-          {/* Wide Infographic Graphic with Semantic HTML5 */}
-          <figure className="overflow-hidden rounded-xl border border-zinc-200 bg-white p-2 sm:p-4 shadow-sm">
-            <picture>
-              <source srcSet="/images/how-typeface-generator-works.webp" type="image/webp" />
-              <source srcSet="/images/how-typeface-generator-works.png" type="image/png" />
-              <img
-                src="/images/how-typeface-generator-works.png"
-                alt="How Typeface Generator Works - Step-by-step workflow to preview, compare, customize typography metrics, and export web fonts online"
-                width={1200}
-                height={675}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-auto rounded-lg"
-              />
-            </picture>
-            <figcaption className="mt-3 text-center text-xs text-zinc-500 font-medium">
-              Figure 1: Visual breakdown of the TypefaceGen workflow—live text synchronization, typeface filtering, typographic metric tuning, and CSS export.
-            </figcaption>
-          </figure>
+          {/* Interactive Media Player (Video Walkthrough & Infographic Switcher) */}
+          <HowItWorksMedia />
 
           {/* 4 In-Depth Step Breakdown Cards for Search Crawlers & Accessibility */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-1">

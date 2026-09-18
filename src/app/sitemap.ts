@@ -55,5 +55,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
             `${baseUrl}/og-image.png`,
           ]
         : [`${baseUrl}/og-image.png`],
+    videos:
+      route.path === ''
+        ? [
+            {
+              title: 'How the Online Typeface Generator Works - Complete Video Walkthrough',
+              thumbnail_loc: `${baseUrl}/images/how-typeface-generator-works.png`,
+              description:
+                'Step-by-step video walkthrough demonstrating how to test custom copy, compare 200+ open-source typefaces, customize typography metrics, and export production CSS code on TypefaceGen.',
+              content_loc: `${baseUrl}/videos/how-typeface-generator-works.mp4`,
+              player_loc: `${baseUrl}/#how-it-works`,
+              duration: 20,
+              publication_date: '2026-09-18T00:00:00Z',
+            },
+          ]
+        : undefined,
   }));
 }

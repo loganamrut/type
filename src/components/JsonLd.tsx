@@ -15,6 +15,24 @@ export interface InfographicData {
   height: number;
 }
 
+export interface VideoClip {
+  name: string;
+  startOffset: number;
+  endOffset: number;
+  url?: string;
+}
+
+export interface VideoObjectData {
+  name: string;
+  description: string;
+  thumbnailUrl: string[];
+  uploadDate: string;
+  duration: string;
+  contentUrl: string;
+  embedUrl?: string;
+  clips?: VideoClip[];
+}
+
 export interface ItemListEntry {
   name: string;
   description?: string;
@@ -33,6 +51,7 @@ export interface JsonLdProps {
   toolDescription?: string;
   features?: string[];
   infographic?: InfographicData;
+  video?: VideoObjectData;
   howTo?: {
     name: string;
     description: string;
@@ -57,6 +76,7 @@ export function JsonLd({
   toolDescription,
   features,
   infographic,
+  video,
   howTo,
   itemList,
   url = 'https://typefacegen.com/',
@@ -287,6 +307,35 @@ export function JsonLd({
       })),
     };
     graph.push(itemListSchema);
+  }
+
+  // 9. VideoObject Schema (Google Video Search & Rich Snippets with Key Moments)
+  if (video) {
+    const videoSchema: any = {
+      '@type': 'VideoObject',
+      '@id': `${canonicalUrl}#video`,
+      name: video.name,
+      description: video.description,
+      thumbnailUrl: video.thumbnailUrl,
+      uploadDate: video.uploadDate,
+      duration: video.duration,
+      contentUrl: video.contentUrl,
+      embedUrl: video.embedUrl || `${canonicalUrl}#how-it-works`,
+      publisher: { '@id': 'https://typefacegen.com/#organization' },
+      inLanguage: 'en-US',
+    };
+
+    if (video.clips && video.clips.length > 0) {
+      videoSchema.hasPart = video.clips.map((clip) => ({
+        '@type': 'Clip',
+        name: clip.name,
+        startOffset: clip.startOffset,
+        endOffset: clip.endOffset,
+        url: clip.url || `${canonicalUrl}#step-${clip.startOffset}`,
+      }));
+    }
+
+    graph.push(videoSchema);
   }
 
   const structuredData = {
