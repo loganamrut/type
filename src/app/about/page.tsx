@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     'font preview architecture',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/about',
+    canonical: 'https://typefacegen.com/about/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/about',
+    url: 'https://typefacegen.com/about/',
     siteName: 'TypefaceGen',
     title: 'About TypefaceGen - Mission, Technology & Privacy Architecture',
     description:

@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'preview serif fonts',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/serif-typeface-generator',
+    canonical: 'https://typefacegen.com/serif-typeface-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/serif-typeface-generator',
+    url: 'https://typefacegen.com/serif-typeface-generator/',
     siteName: 'TypefaceGen',
     title: 'Serif Typeface Generator - Preview & Test Serif Fonts Online',
     description:

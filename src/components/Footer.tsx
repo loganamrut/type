@@ -36,11 +36,11 @@ export function Footer() {
             </h3>
             <ul className="space-y-0.5 text-zinc-600">
               <li><Link href="/" className="block py-1.5 hover:text-zinc-950 transition-colors">Typeface Generator</Link></li>
-              <li><Link href="/font-pairing-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Font Pairing</Link></li>
-              <li><Link href="/font-combination-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Font Combinations</Link></li>
-              <li><Link href="/font-tester" className="block py-1.5 hover:text-zinc-950 transition-colors">Font Tester</Link></li>
-              <li><Link href="/typography-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Type Scale</Link></li>
-              <li><Link href="/variable-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Variable Fonts</Link></li>
+              <li><Link href="/font-pairing-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Font Pairing</Link></li>
+              <li><Link href="/font-combination-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Font Combinations</Link></li>
+              <li><Link href="/font-tester/" className="block py-1.5 hover:text-zinc-950 transition-colors">Font Tester</Link></li>
+              <li><Link href="/typography-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Type Scale</Link></li>
+              <li><Link href="/variable-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Variable Fonts</Link></li>
             </ul>
           </div>
 
@@ -50,13 +50,13 @@ export function Footer() {
               By Style
             </h3>
             <ul className="space-y-0.5 text-zinc-600">
-              <li><Link href="/serif-typeface-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Serif</Link></li>
-              <li><Link href="/sans-serif-typeface-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Sans-Serif</Link></li>
-              <li><Link href="/display-typeface-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Display</Link></li>
-              <li><Link href="/monospace-typeface-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Monospace</Link></li>
-              <li><Link href="/script-typeface-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Script</Link></li>
-              <li><Link href="/vintage-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Vintage</Link></li>
-              <li><Link href="/modern-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Modern</Link></li>
+              <li><Link href="/serif-typeface-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Serif</Link></li>
+              <li><Link href="/sans-serif-typeface-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Sans-Serif</Link></li>
+              <li><Link href="/display-typeface-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Display</Link></li>
+              <li><Link href="/monospace-typeface-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Monospace</Link></li>
+              <li><Link href="/script-typeface-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Script</Link></li>
+              <li><Link href="/vintage-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Vintage</Link></li>
+              <li><Link href="/modern-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Modern</Link></li>
             </ul>
           </div>
 
@@ -66,19 +66,19 @@ export function Footer() {
               By Use
             </h3>
             <ul className="space-y-0.5 text-zinc-600">
-              <li><Link href="/heading-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Heading Fonts</Link></li>
-              <li><Link href="/body-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Body Text Fonts</Link></li>
-              <li><Link href="/google-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Google Fonts</Link></li>
-              <li><Link href="/ui-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">UI Fonts</Link></li>
-              <li><Link href="/bold-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Bold Fonts</Link></li>
-              <li><Link href="/elegant-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Elegant Fonts</Link></li>
-              <li><Link href="/minimalist-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Minimalist Fonts</Link></li>
-              <li><Link href="/poster-font-generator" className="block py-1.5 hover:text-zinc-950 transition-colors">Poster Fonts</Link></li>
-              <li><Link href="/font-generator-for-social-media" className="block py-1.5 hover:text-zinc-950 transition-colors">Social Media</Link></li>
-              <li><Link href="/typeface-for-logos" className="block py-1.5 hover:text-zinc-950 transition-colors">For Logos</Link></li>
-              <li><Link href="/typeface-for-websites" className="block py-1.5 hover:text-zinc-950 transition-colors">For Websites</Link></li>
-              <li><Link href="/typeface-for-print" className="block py-1.5 hover:text-zinc-950 transition-colors">For Print</Link></li>
-              <li><Link href="/typeface-for-presentations" className="block py-1.5 hover:text-zinc-950 transition-colors">Presentations</Link></li>
+              <li><Link href="/heading-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Heading Fonts</Link></li>
+              <li><Link href="/body-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Body Text Fonts</Link></li>
+              <li><Link href="/google-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Google Fonts</Link></li>
+              <li><Link href="/ui-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">UI Fonts</Link></li>
+              <li><Link href="/bold-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Bold Fonts</Link></li>
+              <li><Link href="/elegant-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Elegant Fonts</Link></li>
+              <li><Link href="/minimalist-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Minimalist Fonts</Link></li>
+              <li><Link href="/poster-font-generator/" className="block py-1.5 hover:text-zinc-950 transition-colors">Poster Fonts</Link></li>
+              <li><Link href="/font-generator-for-social-media/" className="block py-1.5 hover:text-zinc-950 transition-colors">Social Media</Link></li>
+              <li><Link href="/typeface-for-logos/" className="block py-1.5 hover:text-zinc-950 transition-colors">For Logos</Link></li>
+              <li><Link href="/typeface-for-websites/" className="block py-1.5 hover:text-zinc-950 transition-colors">For Websites</Link></li>
+              <li><Link href="/typeface-for-print/" className="block py-1.5 hover:text-zinc-950 transition-colors">For Print</Link></li>
+              <li><Link href="/typeface-for-presentations/" className="block py-1.5 hover:text-zinc-950 transition-colors">Presentations</Link></li>
             </ul>
           </div>
 
@@ -88,9 +88,9 @@ export function Footer() {
               About & Legal
             </h3>
             <ul className="space-y-0.5 text-zinc-600">
-              <li><Link href="/about" className="block py-1.5 hover:text-zinc-950 transition-colors">About</Link></li>
-              <li><Link href="/privacy" className="block py-1.5 hover:text-zinc-950 transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="block py-1.5 hover:text-zinc-950 transition-colors">Terms & Licensing</Link></li>
+              <li><Link href="/about/" className="block py-1.5 hover:text-zinc-950 transition-colors">About</Link></li>
+              <li><Link href="/privacy/" className="block py-1.5 hover:text-zinc-950 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms/" className="block py-1.5 hover:text-zinc-950 transition-colors">Terms & Licensing</Link></li>
               <li>
                 <button
                   type="button"

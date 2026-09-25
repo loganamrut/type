@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'web font tester',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/font-tester',
+    canonical: 'https://typefacegen.com/font-tester/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/font-tester',
+    url: 'https://typefacegen.com/font-tester/',
     siteName: 'TypefaceGen',
     title: 'Font Tester - Compare & Test Typefaces Online Side-by-Side',
     description:

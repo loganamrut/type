@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'font and typeface generator script',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/script-typeface-generator',
+    canonical: 'https://typefacegen.com/script-typeface-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/script-typeface-generator',
+    url: 'https://typefacegen.com/script-typeface-generator/',
     siteName: 'TypefaceGen',
     title: 'Script Typeface Generator - Preview Cursive & Handwritten Fonts',
     description:

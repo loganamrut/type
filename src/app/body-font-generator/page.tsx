@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'readable typeface generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/body-font-generator',
+    canonical: 'https://typefacegen.com/body-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/body-font-generator',
+    url: 'https://typefacegen.com/body-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Body Font Generator - Best Readable Fonts for Body Text',
     description:

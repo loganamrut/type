@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'high resolution print fonts',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/typeface-for-print',
+    canonical: 'https://typefacegen.com/typeface-for-print/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/typeface-for-print',
+    url: 'https://typefacegen.com/typeface-for-print/',
     siteName: 'TypefaceGen',
     title: 'Typeface for Print - Best Fonts for Print Design & Publishing',
     description:

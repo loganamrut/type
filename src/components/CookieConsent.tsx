@@ -160,11 +160,11 @@ export function CookieConsent() {
         {/* Privacy Policy Link */}
         <div className="text-[11px] text-zinc-600 text-center">
           Read our{' '}
-          <Link href="/privacy" className="underline hover:text-zinc-950 text-zinc-700 font-medium">
+          <Link href="/privacy/" className="underline hover:text-zinc-950 text-zinc-700 font-medium">
             Privacy Policy
           </Link>{' '}
           and{' '}
-          <Link href="/terms" className="underline hover:text-zinc-950 text-zinc-700 font-medium">
+          <Link href="/terms/" className="underline hover:text-zinc-950 text-zinc-700 font-medium">
             Terms of Service
           </Link>
           .

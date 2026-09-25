@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'trendy font generator 2024',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/modern-font-generator',
+    canonical: 'https://typefacegen.com/modern-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/modern-font-generator',
+    url: 'https://typefacegen.com/modern-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Modern Font Generator - Contemporary Typefaces for Design',
     description:

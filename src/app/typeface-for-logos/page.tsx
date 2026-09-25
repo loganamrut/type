@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     'free logo typeface preview',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/typeface-for-logos',
+    canonical: 'https://typefacegen.com/typeface-for-logos/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/typeface-for-logos',
+    url: 'https://typefacegen.com/typeface-for-logos/',
     siteName: 'TypefaceGen',
     title: 'Typeface for Logos - Preview & Test Wordmark Fonts Online',
     description:

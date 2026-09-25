@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'luxury minimal fonts',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/minimalist-font-generator',
+    canonical: 'https://typefacegen.com/minimalist-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/minimalist-font-generator',
+    url: 'https://typefacegen.com/minimalist-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Minimalist Font Generator - Clean Fonts for Minimal Design',
     description:

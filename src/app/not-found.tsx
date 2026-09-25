@@ -24,7 +24,7 @@ export default function NotFound() {
           Typeface Generator
         </Link>
         <Link
-          href="/font-pairing-generator"
+          href="/font-pairing-generator/"
           className="px-3.5 py-1.5 bg-white border border-zinc-200 text-zinc-800 font-medium text-xs rounded hover:bg-zinc-50 transition-colors"
         >
           Font Pairing

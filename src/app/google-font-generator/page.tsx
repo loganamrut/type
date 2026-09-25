@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'google web fonts generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/google-font-generator',
+    canonical: 'https://typefacegen.com/google-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/google-font-generator',
+    url: 'https://typefacegen.com/google-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Google Font Generator - Preview & Test Google Fonts Online',
     description:

@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'terminal font generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/monospace-typeface-generator',
+    canonical: 'https://typefacegen.com/monospace-typeface-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/monospace-typeface-generator',
+    url: 'https://typefacegen.com/monospace-typeface-generator/',
     siteName: 'TypefaceGen',
     title: 'Monospace Typeface Generator - Test Coding & Fixed-Width Fonts',
     description:

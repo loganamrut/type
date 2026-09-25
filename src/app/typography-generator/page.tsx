@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'modular typography',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/typography-generator',
+    canonical: 'https://typefacegen.com/typography-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/typography-generator',
+    url: 'https://typefacegen.com/typography-generator/',
     siteName: 'TypefaceGen',
     title: 'Typography Generator - Modular Type Scale & Hierarchy Calculator',
     description:

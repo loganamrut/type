@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'fat font generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/bold-font-generator',
+    canonical: 'https://typefacegen.com/bold-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/bold-font-generator',
+    url: 'https://typefacegen.com/bold-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Bold Font Generator - Heavy & Impact Typefaces Online Free',
     description:

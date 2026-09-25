@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'fonts for decks',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/typeface-for-presentations',
+    canonical: 'https://typefacegen.com/typeface-for-presentations/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/typeface-for-presentations',
+    url: 'https://typefacegen.com/typeface-for-presentations/',
     siteName: 'TypefaceGen',
     title: 'Typeface for Presentations - Best Fonts for PowerPoint & Slides',
     description:

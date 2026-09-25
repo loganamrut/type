@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'antique font generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/vintage-font-generator',
+    canonical: 'https://typefacegen.com/vintage-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/vintage-font-generator',
+    url: 'https://typefacegen.com/vintage-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Vintage Font Generator - Retro & Classic Typefaces Online',
     description:

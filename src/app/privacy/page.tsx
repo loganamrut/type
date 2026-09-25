@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     'privacy policy',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/privacy',
+    canonical: 'https://typefacegen.com/privacy/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/privacy',
+    url: 'https://typefacegen.com/privacy/',
     siteName: 'TypefaceGen',
     title: 'Privacy Policy - Zero Tracking Client-Side Architecture',
     description:

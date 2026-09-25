@@ -428,56 +428,56 @@ export default function HomePage() {
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
               <Link
-                href="/font-pairing-generator"
+                href="/font-pairing-generator/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Font Pairing Tool</span>
                 <ArrowRight className="w-3 h-3 text-zinc-400" />
               </Link>
               <Link
-                href="/font-tester"
+                href="/font-tester/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Font Tester</span>
                 <ArrowRight className="w-3 h-3 text-zinc-400" />
               </Link>
               <Link
-                href="/typography-generator"
+                href="/typography-generator/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Type Scale Tool</span>
                 <ArrowRight className="w-3 h-3 text-zinc-400" />
               </Link>
               <Link
-                href="/serif-typeface-generator"
+                href="/serif-typeface-generator/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Serif Typefaces</span>
                 <ArrowRight className="w-3 h-3 text-zinc-400" />
               </Link>
               <Link
-                href="/sans-serif-typeface-generator"
+                href="/sans-serif-typeface-generator/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Sans-Serif</span>
                 <ArrowRight className="w-3 h-3 text-zinc-400" />
               </Link>
               <Link
-                href="/display-typeface-generator"
+                href="/display-typeface-generator/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Display Fonts</span>
                 <ArrowRight className="w-3 h-3 text-zinc-400" />
               </Link>
               <Link
-                href="/monospace-typeface-generator"
+                href="/monospace-typeface-generator/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Monospace</span>
                 <ArrowRight className="w-3 h-3 text-zinc-400" />
               </Link>
               <Link
-                href="/script-typeface-generator"
+                href="/script-typeface-generator/"
                 className="p-3 rounded border border-zinc-200 bg-white hover:border-zinc-950 transition-colors flex items-center justify-between"
               >
                 <span>Script Fonts</span>
@@ -499,26 +499,26 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 text-xs">
             {[
-              { href: '/heading-font-generator', label: 'Heading Fonts', desc: 'Titles & hero sections' },
-              { href: '/body-font-generator', label: 'Body Fonts', desc: 'Paragraphs & articles' },
-              { href: '/google-font-generator', label: 'Google Fonts', desc: 'Preview all 200+ fonts' },
-              { href: '/font-combination-generator', label: 'Font Combinations', desc: 'Heading + body pairs' },
-              { href: '/variable-font-generator', label: 'Variable Fonts', desc: 'Weight axis preview' },
-              { href: '/bold-font-generator', label: 'Bold Fonts', desc: 'Heavy & impact type' },
-              { href: '/elegant-font-generator', label: 'Elegant Fonts', desc: 'Luxury & refined' },
-              { href: '/modern-font-generator', label: 'Modern Fonts', desc: 'Contemporary design' },
-              { href: '/minimalist-font-generator', label: 'Minimalist Fonts', desc: 'Clean & understated' },
-              { href: '/vintage-font-generator', label: 'Vintage Fonts', desc: 'Retro & classic' },
-              { href: '/ui-font-generator', label: 'UI Fonts', desc: 'Apps & interfaces' },
-              { href: '/poster-font-generator', label: 'Poster Fonts', desc: 'Event flyers & large format' },
-              { href: '/font-generator-for-social-media', label: 'Social Media Fonts', desc: 'Instagram, TikTok & more' },
-              { href: '/typeface-for-print', label: 'For Print', desc: 'Books & publishing' },
-              { href: '/typeface-for-presentations', label: 'For Presentations', desc: 'PowerPoint & Slides' },
-              { href: '/typeface-for-logos', label: 'For Logos', desc: 'Wordmarks & brand identity' },
-              { href: '/typeface-for-websites', label: 'For Websites', desc: 'Web & landing pages' },
-              { href: '/serif-typeface-generator', label: 'Serif Fonts', desc: 'Editorial & book serifs' },
-              { href: '/sans-serif-typeface-generator', label: 'Sans-Serif Fonts', desc: 'Modern grotesques' },
-              { href: '/display-typeface-generator', label: 'Display Fonts', desc: 'Expressive display type' },
+              { href: '/heading-font-generator/', label: 'Heading Fonts', desc: 'Titles & hero sections' },
+              { href: '/body-font-generator/', label: 'Body Fonts', desc: 'Paragraphs & articles' },
+              { href: '/google-font-generator/', label: 'Google Fonts', desc: 'Preview all 200+ fonts' },
+              { href: '/font-combination-generator/', label: 'Font Combinations', desc: 'Heading + body pairs' },
+              { href: '/variable-font-generator/', label: 'Variable Fonts', desc: 'Weight axis preview' },
+              { href: '/bold-font-generator/', label: 'Bold Fonts', desc: 'Heavy & impact type' },
+              { href: '/elegant-font-generator/', label: 'Elegant Fonts', desc: 'Luxury & refined' },
+              { href: '/modern-font-generator/', label: 'Modern Fonts', desc: 'Contemporary design' },
+              { href: '/minimalist-font-generator/', label: 'Minimalist Fonts', desc: 'Clean & understated' },
+              { href: '/vintage-font-generator/', label: 'Vintage Fonts', desc: 'Retro & classic' },
+              { href: '/ui-font-generator/', label: 'UI Fonts', desc: 'Apps & interfaces' },
+              { href: '/poster-font-generator/', label: 'Poster Fonts', desc: 'Event flyers & large format' },
+              { href: '/font-generator-for-social-media/', label: 'Social Media Fonts', desc: 'Instagram, TikTok & more' },
+              { href: '/typeface-for-print/', label: 'For Print', desc: 'Books & publishing' },
+              { href: '/typeface-for-presentations/', label: 'For Presentations', desc: 'PowerPoint & Slides' },
+              { href: '/typeface-for-logos/', label: 'For Logos', desc: 'Wordmarks & brand identity' },
+              { href: '/typeface-for-websites/', label: 'For Websites', desc: 'Web & landing pages' },
+              { href: '/serif-typeface-generator/', label: 'Serif Fonts', desc: 'Editorial & book serifs' },
+              { href: '/sans-serif-typeface-generator/', label: 'Sans-Serif Fonts', desc: 'Modern grotesques' },
+              { href: '/display-typeface-generator/', label: 'Display Fonts', desc: 'Expressive display type' },
             ].map((item) => (
               <Link
                 key={item.href}

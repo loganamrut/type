@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'variable font animation',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/variable-font-generator',
+    canonical: 'https://typefacegen.com/variable-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/variable-font-generator',
+    url: 'https://typefacegen.com/variable-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Variable Font Generator - Preview & Test Variable Fonts Online',
     description:

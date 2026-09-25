@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'title typeface preview',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/heading-font-generator',
+    canonical: 'https://typefacegen.com/heading-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/heading-font-generator',
+    url: 'https://typefacegen.com/heading-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Heading Font Generator - Best Fonts for Titles & Headlines',
     description:

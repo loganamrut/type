@@ -6,21 +6,21 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const generatorLinks = [
-  { href: '/heading-font-generator', label: 'Heading Fonts' },
-  { href: '/body-font-generator', label: 'Body Fonts' },
-  { href: '/google-font-generator', label: 'Google Fonts' },
-  { href: '/bold-font-generator', label: 'Bold Fonts' },
-  { href: '/elegant-font-generator', label: 'Elegant Fonts' },
-  { href: '/modern-font-generator', label: 'Modern Fonts' },
-  { href: '/minimalist-font-generator', label: 'Minimalist Fonts' },
-  { href: '/vintage-font-generator', label: 'Vintage Fonts' },
-  { href: '/ui-font-generator', label: 'UI Fonts' },
-  { href: '/poster-font-generator', label: 'Poster Fonts' },
-  { href: '/font-generator-for-social-media', label: 'Social Media Fonts' },
-  { href: '/font-combination-generator', label: 'Font Combinations' },
-  { href: '/variable-font-generator', label: 'Variable Fonts' },
-  { href: '/typeface-for-print', label: 'For Print' },
-  { href: '/typeface-for-presentations', label: 'For Presentations' },
+  { href: '/heading-font-generator/', label: 'Heading Fonts' },
+  { href: '/body-font-generator/', label: 'Body Fonts' },
+  { href: '/google-font-generator/', label: 'Google Fonts' },
+  { href: '/bold-font-generator/', label: 'Bold Fonts' },
+  { href: '/elegant-font-generator/', label: 'Elegant Fonts' },
+  { href: '/modern-font-generator/', label: 'Modern Fonts' },
+  { href: '/minimalist-font-generator/', label: 'Minimalist Fonts' },
+  { href: '/vintage-font-generator/', label: 'Vintage Fonts' },
+  { href: '/ui-font-generator/', label: 'UI Fonts' },
+  { href: '/poster-font-generator/', label: 'Poster Fonts' },
+  { href: '/font-generator-for-social-media/', label: 'Social Media Fonts' },
+  { href: '/font-combination-generator/', label: 'Font Combinations' },
+  { href: '/variable-font-generator/', label: 'Variable Fonts' },
+  { href: '/typeface-for-print/', label: 'For Print' },
+  { href: '/typeface-for-presentations/', label: 'For Presentations' },
 ];
 
 export function Header() {
@@ -31,10 +31,10 @@ export function Header() {
 
   const navLinks = [
     { href: '/', label: 'Generator' },
-    { href: '/font-pairing-generator', label: 'Pairing' },
-    { href: '/font-tester', label: 'Tester' },
-    { href: '/typography-generator', label: 'Type Scale' },
-    { href: '/about', label: 'About' },
+    { href: '/font-pairing-generator/', label: 'Pairing' },
+    { href: '/font-tester/', label: 'Tester' },
+    { href: '/typography-generator/', label: 'Type Scale' },
+    { href: '/about/', label: 'About' },
   ];
 
   return (
@@ -157,11 +157,11 @@ export function Header() {
             </span>
             <div className="grid grid-cols-2 gap-1 text-xs text-zinc-600 px-3">
               {[
-                { href: '/serif-typeface-generator', label: 'Serif' },
-                { href: '/sans-serif-typeface-generator', label: 'Sans-Serif' },
-                { href: '/display-typeface-generator', label: 'Display' },
-                { href: '/monospace-typeface-generator', label: 'Monospace' },
-                { href: '/script-typeface-generator', label: 'Script' },
+                { href: '/serif-typeface-generator/', label: 'Serif' },
+                { href: '/sans-serif-typeface-generator/', label: 'Sans-Serif' },
+                { href: '/display-typeface-generator/', label: 'Display' },
+                { href: '/monospace-typeface-generator/', label: 'Monospace' },
+                { href: '/script-typeface-generator/', label: 'Script' },
               ].map(l => (
                 <Link
                   key={l.href}

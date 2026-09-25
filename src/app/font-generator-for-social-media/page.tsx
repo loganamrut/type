@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'youtube channel font',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/font-generator-for-social-media',
+    canonical: 'https://typefacegen.com/font-generator-for-social-media/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/font-generator-for-social-media',
+    url: 'https://typefacegen.com/font-generator-for-social-media/',
     siteName: 'TypefaceGen',
     title: 'Font Generator for Social Media - Stylish Text Fonts Online',
     description:

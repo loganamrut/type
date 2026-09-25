@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     'typography terms',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/terms',
+    canonical: 'https://typefacegen.com/terms/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/terms',
+    url: 'https://typefacegen.com/terms/',
     siteName: 'TypefaceGen',
     title: 'Terms of Service & Licensing - TypefaceGen',
     description:

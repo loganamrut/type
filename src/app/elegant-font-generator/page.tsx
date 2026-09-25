@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'fashion typography generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/elegant-font-generator',
+    canonical: 'https://typefacegen.com/elegant-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/elegant-font-generator',
+    url: 'https://typefacegen.com/elegant-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Elegant Font Generator - Luxury & Refined Typefaces Online',
     description:

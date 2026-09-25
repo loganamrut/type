@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'font pairing tool',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/font-pairing-generator',
+    canonical: 'https://typefacegen.com/font-pairing-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/font-pairing-generator',
+    url: 'https://typefacegen.com/font-pairing-generator/',
     siteName: 'TypefaceGen',
     title: 'Font Pairing Generator - Free Typography Combinations & Tester',
     description:
@@ -153,13 +153,13 @@ export default function FontPairingPage() {
           </p>
           <div className="flex items-center gap-2 shrink-0">
             <Link
-              href="/font-tester"
+              href="/font-tester/"
               className="px-3 py-1.5 bg-zinc-950 text-white rounded font-medium hover:opacity-90"
             >
               Font Tester &rarr;
             </Link>
             <Link
-              href="/typography-generator"
+              href="/typography-generator/"
               className="px-3 py-1.5 bg-white border border-zinc-200 text-zinc-800 rounded font-medium hover:bg-zinc-50"
             >
               Type Scale &rarr;

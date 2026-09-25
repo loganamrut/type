@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'poster typeface',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/poster-font-generator',
+    canonical: 'https://typefacegen.com/poster-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/poster-font-generator',
+    url: 'https://typefacegen.com/poster-font-generator/',
     siteName: 'TypefaceGen',
     title: 'Poster Font Generator - Bold Display Fonts for Posters',
     description:

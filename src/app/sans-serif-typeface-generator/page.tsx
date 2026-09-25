@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'ui typography generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/sans-serif-typeface-generator',
+    canonical: 'https://typefacegen.com/sans-serif-typeface-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/sans-serif-typeface-generator',
+    url: 'https://typefacegen.com/sans-serif-typeface-generator/',
     siteName: 'TypefaceGen',
     title: 'Sans-Serif Typeface Generator - Preview Clean & Modern Sans Fonts',
     description:

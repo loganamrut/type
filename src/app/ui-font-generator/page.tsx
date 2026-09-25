@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'design system fonts',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/ui-font-generator',
+    canonical: 'https://typefacegen.com/ui-font-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/ui-font-generator',
+    url: 'https://typefacegen.com/ui-font-generator/',
     siteName: 'TypefaceGen',
     title: 'UI Font Generator - Best Fonts for App & Interface Design',
     description:

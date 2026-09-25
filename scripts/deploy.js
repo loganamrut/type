@@ -22,7 +22,8 @@ try {
   console.log('\n--- 2. COMMITTING AND PUSHING MAIN BRANCH ---');
   run('git add -A');
   try {
-    run('git commit -m "feat(video): add How It Works video walkthrough, VideoObject schema with Key Moments, and Google Video Sitemap"');
+    const msg = process.argv.slice(2).join(' ') || 'fix(seo): resolve GSC redirect issues, enforce canonical trailing slashes, align sitemap and internal links';
+    run(`git commit -m "${msg}"`);
   } catch (e) {
     console.log('No new changes to commit on main.');
   }

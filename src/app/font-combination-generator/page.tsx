@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'font harmony generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/font-combination-generator',
+    canonical: 'https://typefacegen.com/font-combination-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/font-combination-generator',
+    url: 'https://typefacegen.com/font-combination-generator/',
     siteName: 'TypefaceGen',
     title: 'Font Combination Generator - Perfect Font Pair Finder Online',
     description:
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function FontCombinationGeneratorPage() {
   const breadcrumbs = [
-    { label: 'Tools', href: '/font-pairing-generator' },
+    { label: 'Tools', href: '/font-pairing-generator/' },
     { label: 'Font Combinations' },
   ];
 

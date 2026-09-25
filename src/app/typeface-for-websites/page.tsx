@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'responsive typography for websites',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/typeface-for-websites',
+    canonical: 'https://typefacegen.com/typeface-for-websites/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/typeface-for-websites',
+    url: 'https://typefacegen.com/typeface-for-websites/',
     siteName: 'TypefaceGen',
     title: 'Typeface for Websites - Preview & Optimize Web Typography Online',
     description:

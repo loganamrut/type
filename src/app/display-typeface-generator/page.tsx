@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'creative typography generator',
   ],
   alternates: {
-    canonical: 'https://typefacegen.com/display-typeface-generator',
+    canonical: 'https://typefacegen.com/display-typeface-generator/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://typefacegen.com/display-typeface-generator',
+    url: 'https://typefacegen.com/display-typeface-generator/',
     siteName: 'TypefaceGen',
     title: 'Display Typeface Generator - Preview Bold & Headline Fonts Online',
     description:
