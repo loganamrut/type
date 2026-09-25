@@ -1,0 +1,260 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#09090b" flood-opacity="0.05" />
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#09090b" flood-opacity="0.03" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <!-- Subtle inner canvas -->
+  <rect x="16" y="16" width="1168" height="643" rx="16" fill="#fafafa" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Header Badge -->
+  <g transform="translate(485, 36)">
+    <rect width="230" height="28" rx="14" fill="#f4f4f5" stroke="#e4e4e7" stroke-width="1"/>
+    <circle cx="16" cy="14" r="4.5" fill="#10b981"/>
+    <text x="28" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#52525b" letter-spacing="0.05em">HOW IT WORKS WORKFLOW</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="800" fill="#09090b" text-anchor="middle" letter-spacing="-0.03em">
+    How the Online Typeface Generator Works
+  </text>
+  <text x="600" y="126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#71717a" text-anchor="middle">
+    A fast, 4-step workflow to preview custom copy, compare typefaces, adjust metrics, and export production CSS.
+  </text>
+
+  <!-- Connecting Line -->
+  <line x1="180" y1="180" x2="1020" y2="180" stroke="#d4d4d8" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- STEP 1 -->
+  <g transform="translate(48, 155)">
+    <!-- Step Node -->
+    <circle cx="123" cy="25" r="20" fill="#09090b" stroke="#ffffff" stroke-width="3"/>
+    <text x="123" y="30" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <!-- Step Header -->
+    <text x="123" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#09090b" text-anchor="middle">Input Custom Text</text>
+    <text x="123" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="400" fill="#71717a" text-anchor="middle">Type or paste your copy</text>
+
+    <!-- Card -->
+    <g transform="translate(0, 102)" filter="url(#card-shadow)">
+      <rect width="246" height="280" rx="10" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+      
+      <!-- Mock Input Box -->
+      <g transform="translate(16, 20)">
+        <text x="0" y="11" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#71717a">LIVE INPUT PROMPT</text>
+        <rect x="0" y="18" width="214" height="44" rx="6" fill="#ffffff" stroke="#09090b" stroke-width="1.5"/>
+        <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="500" fill="#09090b">Your text here</text>
+        <line x1="102" y1="32" x2="102" y2="50" stroke="#2563eb" stroke-width="2"/>
+      </g>
+
+      <!-- Instant Reactive Sync -->
+      <g transform="translate(16, 100)">
+        <rect width="214" height="56" rx="6" fill="#f4f4f5" stroke="#e4e4e7" stroke-width="1"/>
+        <circle cx="14" cy="18" r="4" fill="#10b981"/>
+        <text x="24" y="21" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#18181b">Instant DOM Sync</text>
+        <text x="12" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#71717a">Reactive client-side binding</text>
+      </g>
+
+      <!-- Supported Characters -->
+      <g transform="translate(16, 172)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#71717a">SPECIMEN MODES</text>
+        <rect x="0" y="18" width="102" height="26" rx="4" fill="#ffffff" stroke="#e4e4e7"/>
+        <text x="10" y="35" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#27272a">Aa Alphabet</text>
+        <rect x="110" y="18" width="104" height="26" rx="4" fill="#ffffff" stroke="#e4e4e7"/>
+        <text x="120" y="35" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#27272a">123 Numbers</text>
+
+        <rect x="0" y="50" width="214" height="26" rx="4" fill="#ffffff" stroke="#e4e4e7"/>
+        <text x="10" y="67" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#27272a">!@# Punctuation &amp; Symbols</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- STEP 2 -->
+  <g transform="translate(332, 155)">
+    <!-- Step Node -->
+    <circle cx="123" cy="25" r="20" fill="#09090b" stroke="#ffffff" stroke-width="3"/>
+    <text x="123" y="30" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Step Header -->
+    <text x="123" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#09090b" text-anchor="middle">Filter &amp; Compare</text>
+    <text x="123" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="400" fill="#71717a" text-anchor="middle">200+ curated typefaces</text>
+
+    <!-- Card -->
+    <g transform="translate(0, 102)" filter="url(#card-shadow)">
+      <rect width="246" height="280" rx="10" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+      
+      <!-- Category Pills -->
+      <g transform="translate(14, 16)">
+        <rect x="0" y="0" width="46" height="22" rx="11" fill="#09090b"/>
+        <text x="23" y="14" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600" fill="#ffffff" text-anchor="middle">All</text>
+        <rect x="52" y="0" width="48" height="22" rx="11" fill="#f4f4f5" stroke="#e4e4e7"/>
+        <text x="76" y="14" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="500" fill="#52525b" text-anchor="middle">Serif</text>
+        <rect x="106" y="0" width="56" height="22" rx="11" fill="#f4f4f5" stroke="#e4e4e7"/>
+        <text x="134" y="14" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="500" fill="#52525b" text-anchor="middle">Sans</text>
+        <rect x="168" y="0" width="50" height="22" rx="11" fill="#f4f4f5" stroke="#e4e4e7"/>
+        <text x="193" y="14" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="500" fill="#52525b" text-anchor="middle">Mono</text>
+      </g>
+
+      <!-- Font Card Mini Specimen 1: Inter -->
+      <g transform="translate(14, 48)">
+        <rect width="218" height="64" rx="6" fill="#ffffff" stroke="#e4e4e7" stroke-width="1"/>
+        <text x="10" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#09090b">Inter</text>
+        <text x="188" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="600" fill="#71717a">SANS</text>
+        <text x="10" y="46" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="400" fill="#09090b">Modern UI design</text>
+      </g>
+
+      <!-- Font Card Mini Specimen 2: Playfair Display -->
+      <g transform="translate(14, 120)">
+        <rect width="218" height="64" rx="6" fill="#fafafa" stroke="#18181b" stroke-width="1.5"/>
+        <text x="10" y="18" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#09090b">Playfair Display</text>
+        <text x="188" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="600" fill="#71717a">SERIF</text>
+        <text x="10" y="48" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#09090b">Editorial luxury</text>
+      </g>
+
+      <!-- Font Card Mini Specimen 3: JetBrains Mono -->
+      <g transform="translate(14, 192)">
+        <rect width="218" height="64" rx="6" fill="#ffffff" stroke="#e4e4e7" stroke-width="1"/>
+        <text x="10" y="18" font-family="Courier New, monospace" font-size="10" font-weight="700" fill="#09090b">JetBrains Mono</text>
+        <text x="188" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="600" fill="#71717a">MONO</text>
+        <text x="10" y="46" font-family="Courier New, monospace" font-size="14" font-weight="400" fill="#09090b">const code = true;</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- STEP 3 -->
+  <g transform="translate(616, 155)">
+    <!-- Step Node -->
+    <circle cx="123" cy="25" r="20" fill="#09090b" stroke="#ffffff" stroke-width="3"/>
+    <text x="123" y="30" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <!-- Step Header -->
+    <text x="123" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#09090b" text-anchor="middle">Adjust Metrics</text>
+    <text x="123" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="400" fill="#71717a" text-anchor="middle">Size, weight, line-height</text>
+
+    <!-- Card -->
+    <g transform="translate(0, 102)" filter="url(#card-shadow)">
+      <rect width="246" height="280" rx="10" fill="#ffffff" stroke="#e4e4e7" stroke-width="1.5"/>
+      
+      <!-- Slider 1: Font Size -->
+      <g transform="translate(16, 22)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#18181b">Font Size</text>
+        <text x="214" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#52525b" text-anchor="end">32px</text>
+        <!-- Slider Track -->
+        <rect x="0" y="18" width="214" height="6" rx="3" fill="#e4e4e7"/>
+        <rect x="0" y="18" width="120" height="6" rx="3" fill="#18181b"/>
+        <circle cx="120" cy="21" r="7" fill="#ffffff" stroke="#18181b" stroke-width="2"/>
+      </g>
+
+      <!-- Slider 2: Font Weight -->
+      <g transform="translate(16, 76)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#18181b">Weight Axis</text>
+        <text x="214" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#52525b" text-anchor="end">700 Bold</text>
+        <!-- Slider Track -->
+        <rect x="0" y="18" width="214" height="6" rx="3" fill="#e4e4e7"/>
+        <rect x="0" y="18" width="160" height="6" rx="3" fill="#18181b"/>
+        <circle cx="160" cy="21" r="7" fill="#ffffff" stroke="#18181b" stroke-width="2"/>
+      </g>
+
+      <!-- Slider 3: Line Height -->
+      <g transform="translate(16, 130)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#18181b">Line Height</text>
+        <text x="214" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#52525b" text-anchor="end">1.4</text>
+        <!-- Slider Track -->
+        <rect x="0" y="18" width="214" height="6" rx="3" fill="#e4e4e7"/>
+        <rect x="0" y="18" width="90" height="6" rx="3" fill="#18181b"/>
+        <circle cx="90" cy="21" r="7" fill="#ffffff" stroke="#18181b" stroke-width="2"/>
+      </g>
+
+      <!-- Slider 4: Letter Spacing -->
+      <g transform="translate(16, 184)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#18181b">Letter Spacing</text>
+        <text x="214" y="10" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#52525b" text-anchor="end">-0.02em</text>
+        <!-- Slider Track -->
+        <rect x="0" y="18" width="214" height="6" rx="3" fill="#e4e4e7"/>
+        <rect x="0" y="18" width="70" height="6" rx="3" fill="#18181b"/>
+        <circle cx="70" cy="21" r="7" fill="#ffffff" stroke="#18181b" stroke-width="2"/>
+      </g>
+
+      <!-- Live Calculation Pill -->
+      <g transform="translate(16, 238)">
+        <rect width="214" height="28" rx="4" fill="#f4f4f5" stroke="#e4e4e7" stroke-width="1"/>
+        <text x="107" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500" fill="#3f3f46" text-anchor="middle">
+          Modular Ratio: 1.250 Major Third
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- STEP 4 -->
+  <g transform="translate(900, 155)">
+    <!-- Step Node -->
+    <circle cx="123" cy="25" r="20" fill="#09090b" stroke="#ffffff" stroke-width="3"/>
+    <text x="123" y="30" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    
+    <!-- Step Header -->
+    <text x="123" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#09090b" text-anchor="middle">Export CSS &amp; Code</text>
+    <text x="123" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="400" fill="#71717a" text-anchor="middle">Production-ready snippets</text>
+
+    <!-- Card -->
+    <g transform="translate(0, 102)" filter="url(#card-shadow)">
+      <rect width="246" height="280" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1.5"/>
+      
+      <!-- Card Title Bar -->
+      <g transform="translate(12, 12)">
+        <circle cx="6" cy="6" r="3.5" fill="#ef4444"/>
+        <circle cx="18" cy="6" r="3.5" fill="#f59e0b"/>
+        <circle cx="30" cy="6" r="3.5" fill="#10b981"/>
+        <text x="111" y="10" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#a1a1aa" text-anchor="middle">typography.css</text>
+      </g>
+
+      <!-- Code Snippet using tspan -->
+      <g transform="translate(14, 34)">
+        <text x="0" y="14" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9.5" fill="#6ee7b7">@import <tspan fill="#fde047">url('fonts.google...');</tspan></text>
+
+        <text x="0" y="32" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9.5" fill="#93c5fd">.heading-primary <tspan fill="#ffffff">{</tspan></text>
+
+        <text x="10" y="50" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#cbd5e1">font-family: <tspan fill="#fca5a5">'Playfair'</tspan>;</text>
+
+        <text x="10" y="67" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#cbd5e1">font-size: <tspan fill="#fde047">32px</tspan>;</text>
+
+        <text x="10" y="84" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#cbd5e1">font-weight: <tspan fill="#fde047">700</tspan>;</text>
+
+        <text x="10" y="101" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#cbd5e1">line-height: <tspan fill="#fde047">1.4</tspan>;</text>
+
+        <text x="10" y="118" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#cbd5e1">letter-spacing: <tspan fill="#fde047">-0.02em</tspan>;</text>
+
+        <text x="0" y="136" font-family="SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9.5" fill="#ffffff">}</text>
+      </g>
+
+      <!-- Copy Action Buttons -->
+      <g transform="translate(12, 185)">
+        <rect width="222" height="34" rx="6" fill="#ffffff"/>
+        <path d="M16 17 L21 22 L30 13" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="38" y="21" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#09090b">Copy CSS Rules</text>
+        <rect x="175" y="8" width="38" height="18" rx="3" fill="#f4f4f5" stroke="#e4e4e7"/>
+        <text x="194" y="20" font-family="SFMono-Regular, Menlo, monospace" font-size="9" font-weight="600" fill="#71717a" text-anchor="middle">CSS</text>
+
+        <rect y="44" width="222" height="30" rx="6" fill="#27272a" stroke="#3f3f46" stroke-width="1"/>
+        <text x="111" y="63" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#f4f4f5" text-anchor="middle">Copy Styled Unicode Text</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer Banner inside Infographic -->
+  <g transform="translate(48, 595)">
+    <rect width="1104" height="44" rx="8" fill="#ffffff" stroke="#e4e4e7" stroke-width="1"/>
+    <circle cx="24" cy="22" r="5" fill="#10b981"/>
+    <text x="38" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#09090b">
+      TypefaceGen.com
+    </text>
+    <text x="150" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="400" fill="#71717a">
+      • 200+ Open Source Typefaces  •  Zero Server Latency  •  100% Client-Side Private  •  W3C Valid Modular Scale
+    </text>
+    <rect x="990" y="10" width="98" height="24" rx="4" fill="#f4f4f5" stroke="#e4e4e7"/>
+    <text x="1039" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#18181b" text-anchor="middle">100% FREE</text>
+  </g>
+</svg>
